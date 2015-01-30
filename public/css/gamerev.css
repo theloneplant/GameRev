@@ -5,7 +5,7 @@
 
 }
 #search-bar{
-
+	border: 3px solid;
 }
 #user-logo{
 
@@ -26,40 +26,46 @@
 
 }
 .featured-header{
-
+	float:left;
+	width:400px;
 }
 #featured-games{
-
+	width:400px;
 }
 .game-container{
-
+	float:left;
+	padding:20px 20px 0px 20px;
 }
 .game-img-container{
-	background-image: url("images/generic.jpg");
-	width:250px;
-	height:250px;
+	background:url(../images/saintsrow4.jpg) no-repeat;
+	background-size: cover;
+	background-position:50% 50%;
+	width:75px;
+	height:100px;
 }
-.game-img-container img{
-	
-}
+
 .game-title-container{
 
 }
 #featured-reviewers{
-
+	width:400px;
 }
 .reviewer-container{
-
+	float:left;
+	padding:20px 20px 0px 20px;
 }
 .reviewer-img-container{
-	background-image: url("images/generic.jpg");
-	width:250px;
-	height:250px;
+	background:url(../images/generic.jpg) no-repeat;
+	background-size: cover;
+	background-position:50% 50%;
+	width:75px;
+	height:75px;
 }
 .reviewer-name-container{
-
 }
 #footer{
-
+	width:400px;
+	height:50px;
+	background-color: ;
 }
 
