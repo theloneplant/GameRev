@@ -1,11 +1,6 @@
-.featured-game {
-	width: 23%;
-	height: 100%;
-}
-
-.featured-game img {
+.featured-pane {
 	background-size: cover;
-	background-position:50% 50%;
+	background: no-repeat center center;
 	width: 100%;
 	height: 100%;
 }
@@ -14,73 +9,99 @@
 	width: 80%;
 }
 
-
-
-#header{
-
-}
-#logo{
-
-}
-#search-bar{
-	border: 3px solid;
-}
-#user-logo{
-
-}
-#drop-down-arrow{
+#featured-slider {
 	
 }
-#featured-slider{
+
+#featured-slider-inner {
+	max-height: 650px;
+}
+
+#featured-1 {
+	
+}
+
+#featured-2 {
+	
+}
+
+#featured-3 {
+	
+}
+
+#featured-4 {
+	
+}
+
+#create-review {
 
 }
-#featured-description{
 
+#create-review-btn {
+	line-height: 42px;
+	font-size: 22px;
+	display: block;
+	width: 220px;
+	height: 65px;
 }
-#create-review-container{
 
+#top-games-inner {
 }
-#create-review-btn{
 
+.top-games-row {
+	text-align: center;
+	display: table;
+	margin: 0 auto;
 }
-.featured-header{
-	width:400px;
+
+.featured-game {
+	display: inline-block;
+	width: 220px;
+	height: 280px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
-#featured-games{
-	width:400px;
+
+#game-1 {
+	background-image: url("../images/ac-unity.jpg");
 }
-.game-container{
-	float:left;
-	padding:20px 20px 0px 20px;
+
+#game-2 {
+	background-image: url("../images/farcry4.jpg");	
 }
-.game-img-container{
-	background:url(../images/saintsrow4.jpg) no-repeat;
+
+#game-3 {
+	background-image: url("../images/gtav.jpg");
+}
+
+#game-4 {
+	background-image: url("../images/dragonage.jpg");
+}
+
+.center-horiz {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover {
+	background: no-repeat center center;
 	background-size: cover;
-	background-position:50% 50%;
-	width:75px;
-	height:100px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
-.game-title-container{
-
-}
-#featured-reviewers{
-	width:400px;
-}
-.reviewer-container{
-	float:left;
-	padding:20px 20px 0px 20px;
-}
-.reviewer-img-container{
-	background:url(../images/generic.jpg) no-repeat;
+.reviewer-img-container {
+	background:url(../images/user-profile.png) no-repeat;
 	background-size: cover;
 	background-position:50% 50%;
 	width:140px;
 	height:140px;
 }
-.reviewer-name-container{
+.reviewer-name-container {
 }
-#footer{
+#footer {
 	width:400px;
 	height:50px;
 	background-color: ;
