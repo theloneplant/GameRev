@@ -23,7 +23,7 @@
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">GameRev</a>
+		      <a class="navbar-brand" href="../static/index.html">GameRev</a>
 		    </div>
 
 		    <div class="">
@@ -42,10 +42,10 @@
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Username<span class="caret"></span></a>
 		          <ul class="dropdown-menu" role="menu">
 		            <li><a href="#">Account</a></li>
-		            <li><a href="#">Create a Review</a></li>
-		            <li><a href="#">Settings</a></li>
+		            <li><a href="../Dummy/D-NewReview.pdf">Create a Review</a></li>
+		            <li><a href="../Dummy/D-Account.pdf">Settings</a></li>
 		            <li class="divider"></li>
-		            <li><a href="#">Logout</a></li>
+		            <li><a href="../Dummy/LoggedOut.pdf">Logout</a></li>
 		          </ul>
 		        </li>
 		      </ul>
@@ -102,7 +102,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<h3 class="text-center-horiz">Played any games recently?<br><br>Share your opinions with the community!</h3>
-			    <a id="create-review-btn" class="btn btn-lg btn-success center-horiz" href="#">
+			    <a id="create-review-btn" class="btn btn-lg btn-success center-horiz" href="../Dummy/D-NewReview.pdf">
 					Create a Review
 				</a>
 			</div>
@@ -116,6 +116,8 @@
 	</div>
 	
 	<div id="top-games" class="carousel slide" data-ride="carousel">
+		<!--Link Below allow for all the games to click to same Dummy Page-->
+		<a href="../Dummy/D-review.pdf">
 		<!-- Indicators -->
 	  <ol class="carousel-indicators">
 	    <li data-target="#top-games" data-slide-to="0" class="active"></li>
@@ -143,6 +145,7 @@
 	    </div>
 	    
 	    <div class="item">
+	    	
 	    	<div class="top-games-row row">
 	    		<ul class="container-fluid">
 	    			<li id="game-1" class="col-md-2 featured-game cover">
@@ -158,6 +161,7 @@
 		    		</li>
 	    		</ul>
 	    	</div>
+
 	    </div>
 	  </div>
 	  
@@ -171,6 +175,7 @@
 	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 	    <span class="sr-only">Next</span>
 	  </a>
+	</a>
 	</div>
 
 	<div class="container-fluid">
