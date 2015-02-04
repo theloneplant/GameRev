@@ -1,11 +1,4 @@
-.featured-game {
-	width: 23%;
-	height: 100%;
-}
-
-.featured-game img {
-	background-size: cover;
-	background-position:50% 50%;
+.featured-pane {
 	width: 100%;
 	height: 100%;
 }
@@ -14,74 +7,130 @@
 	width: 80%;
 }
 
-
-
-#header{
-
-}
-#logo{
-
-}
-#search-bar{
-	border: 3px solid;
-}
-#user-logo{
-
-}
-#drop-down-arrow{
+#featured-slider {
 	
 }
-#featured-slider{
+
+#featured-slider-inner {
+	max-height: 650px;
+}
+
+#featured-1 {
+	
+}
+
+#featured-2 {
+	
+}
+
+#featured-3 {
+	
+}
+
+#featured-4 {
+	
+}
+
+#create-review {
 
 }
-#featured-description{
 
+#create-review-btn {
+	line-height: 42px;
+	font-size: 22px;
+	display: block;
+	width: 220px;
+	height: 65px;
+	margin-top: 35px;
+	margin-bottom: 35px;
 }
-#create-review-container{
 
+#top-games {
+	margin-top: 15px;
 }
-#create-review-btn{
 
+#top-games-inner {
 }
-.featured-header{
-	width:400px;
+
+.top-games-row {
+	text-align: center;
+	display: table;
+	margin: 0 auto;
 }
-#featured-games{
-	width:400px;
+
+.featured-game {
+	display: inline-block;
+	width: 220px;
+	height: 280px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
-.game-container{
-	float:left;
-	padding:20px 20px 0px 20px;
+
+#game-1 {
+	background-image: url("../images/ac-unity.jpg");
 }
-.game-img-container{
-	background:url(../images/saintsrow4.jpg) no-repeat;
+
+#game-2 {
+	background-image: url("../images/farcry4.jpg");	
+}
+
+#game-3 {
+	background-image: url("../images/gtav.jpg");
+}
+
+#game-4 {
+	background-image: url("../images/saintsrow4.jpg");
+}
+
+.top-critics-row {
+	text-align: center;
+	display: table;
+	margin: 0 auto;
+}
+
+.critic {
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.center-horiz {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center-horiz {
+	width: 100%;
+	text-align: center;
+}
+
+.cover {
+	background: no-repeat center center;
 	background-size: cover;
-	background-position:50% 50%;
-	width:75px;
-	height:100px;
-}
-
-.game-title-container{
-
-}
-#featured-reviewers{
-	width:400px;
-}
-.reviewer-container{
-	float:left;
-	padding:20px 20px 0px 20px;
-}
-.reviewer-img-container{
-	background:url(../images/generic.jpg) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
-	background-position:50% 50%;
+}
+
+.reviewer-img-container {
+	position: relative;
+	background-image: url("../images/user-profile.png");
 	width:140px;
 	height:140px;
 }
-.reviewer-name-container{
+
+.reviewer-name-container {
+	position: absolute;
+	width: 100%;
+	bottom: 10px;
+	font-size: 16px;
 }
-#footer{
-	width:400px;
-	height:50px;
-	background-color: ;
+
+#footer {
+	width:100%;
+	height:150px;
 }
+
