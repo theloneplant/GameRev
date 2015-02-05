@@ -129,8 +129,23 @@
 	font-size: 16px;
 }
 
-#footer {
+#footer-wrapper{
 	width:100%;
+	height:auto;
+	background-color:#EEEEEE;
+}
+
+#footer {
+	width:50%;
 	height:150px;
+	margin-right:auto;
+	margin-left:auto;
+}
+#footer a{
+	float:left;
+	margin:50px;
+	text-decoration: none;
+	font-size:16px;
+	color:#000;
 }
 
