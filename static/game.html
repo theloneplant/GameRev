@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Page</title>
+ 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/gamerev.css" rel="stylesheet">
+	<link href="css/game-page.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div id="header">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="../static/index.html">GameRev</a>
+		    </div>
+
+		    <div>
+		    	<form class="search-bar navbar-form navbar-left" role="search">
+			        <div class="search-bar input-group">
+			            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+			            <div class="input-group-btn">
+			            	<a href="../Dummy/Search.html"
+			                	<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+			            	</a>
+			            </div>
+			        </div>
+		        </form>
+		    </div>
+
+		    <ul class="nav navbar-nav navbar-right">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Username<span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="../Dummy/Account.html">Account</a></li>
+		            <li><a href="../Dummy/NewReview.html">Create a Review</a></li>
+		            <li><a href="../Dummy/Setting.html">Settings</a></li>
+		            <li class="divider"></li>
+		            <li><a href="../Dummy/Logout.html">Logout</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		  </div>
+		</nav>
+	</div>
+
+	<div id="game-title" class="cover">
+		<div class="container">
+			<table id="game-title-container">
+				<td class="game-main-thumbnail">
+					<img class="game-image img-responsive" src="images/dragonage.jpg"/>
+				</td>
+				<td id="game-title-text" valign="bottom">
+					<h1>Dragon Age: Inquisition (Example)</h1>
+				</td>
+			</table>
+		</div>
+	</div>
+
+	<div id="game-content" class="container">
+		<div class="max-width-container">
+			<h2 class="fluid-container">About</h2>
+			<hr>
+			<div id="game-info" class="container max-width-container">
+				<div class="game-info-text">
+					<strong>Developer:</strong> BioWare
+				</div>
+				<div class="game-info-text">
+					<strong>Publisher:</strong> Electronic Arts
+				</div>
+				<div class="game-info-text">
+					<strong>Release Date:</strong> November 18, 2014
+				</div>
+			</div>
+			<div id="game-description" class="container max-width-container">
+				Dragon Age: Inquisition is an action role-playing video game developed by BioWare and published by Electronic Arts. It is a sequel to Dragon Age: Origins and Dragon Age II, making it the third major game in the Dragon Age franchise.<br>In Dragon Age: Inquisition the world of Thedas is being torn apart by a massive, mysterious breach in the sky. Players must assume the role of the Inquisitor and lead a team of legendary heroes to uncover the truth behind the impending devastation.
+			</div>
+			<h3 id="game-verdict" class="fluid-container">
+				Verdict: <strong class="game-good-review">Good</strong>
+			</h3>
+			<hr>
+			<div id="game-reviews">
+				<h2 class="fluid-container">Reviews</h2>
+				<div id="game-reviews" class="max-width-container">
+					<div class="game-review fluid-container">
+						<a href="profile.html">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="../Dummy/Review.html">
+								This is the BEST GAME EVER
+							</a>
+							 | 
+							<strong class="game-good-review">
+								Good
+							</strong>
+						</h4>
+						Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game!
+					</div>
+					<div class="game-review fluid-container">
+						<a href="profile.html">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="../Dummy/Review.html">
+								It's alright
+							</a>
+							 | 
+							<strong class="game-ok-review">
+								Okay
+							</strong>
+						</h4>
+						The game looks pretty and everything, but I found myself getting bored pretty often. Even though the story has its moments, I feel like there is too much down time between scenes.
+					</div>
+					<div class="game-review fluid-container">
+						<a class="game-user-profile-img" href="profile.html">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="../Dummy/Review.html">
+								I HAD TO MONEY FOR THIS?!?!
+							</a>
+							 | 
+							<strong class="game-bad-review">
+								Bad
+							</strong>
+						</h4>
+						WOW what a horrible game! Way too much character customization and confusing options to pick from! I wish I spent my money on a good game like Bad Rats!
+					</div>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer-wrapper">
+		<div id="footer">
+			<a href="../Dummy/About.html">About Gamerev</a>
+			<a href="../Dummy/Terms.html">Terms of Service</a>
+			<a href="../Dummy/Setting.html">Settings</a>
+		</div>
+	</div>
+</body>
+</html>
