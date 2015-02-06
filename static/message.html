@@ -1,74 +1,77 @@
  <!doctype html>
 
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>GameRev</title>
-     
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameRev</title>
+ 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <link href="css/gamerev.css" rel="stylesheet">
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/gamerev.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-    </head>
+</head>
 
-    <body>
-        <div id="header">
-            <nav class="navbar navbar-default">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="index.html">GameRev</a>
-                </div>
+<body>
+    <div id="header">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#toggle-header">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">GameRev</a>
+            </div>
 
-                <div class="">
-                    <form class="search-bar navbar-form navbar-left" role="search">
-                        <div class="search-bar input-group">
-                            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                            <div class="input-group-btn">
+            <div id="toggle-header" class="collapse navbar-collapse">
+                <form class="search-bar navbar-form navbar-left" role="search">
+                    <div class="search-bar input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                        <div class="input-group-btn">
+                            <a href="search.html"
                                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                            </div>
+                            </a>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
 
                 <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Username<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="profile.html">Account</a></li>
-                    <li><a href="new_review.html">Create a Review</a></li>
-                    <li><a href="profile_setting.html">Settings</a></li>
-                    <li class="divider"></li>
-                    <li><a href="logout.html">Logout</a></li>
-                  </ul>
-                </li>
-          </ul>
-              </div>
-            </nav>
-        </div>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Username<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="profile.html">Account</a></li>
+                        <li><a href="new_review.html">Create a Review</a></li>
+                        <li><a href="profile_setting.html">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="logout.html">Logout</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+    </div>
 
+    <div>
+    <p>Personalized Messages</p>
+    </div>
 
-<div>
-<p>Personalized Messages</p>
-</div>
-
-<div> 
-
-
-
-
-        <nav class="navbar navbar-default footer" >
+    <nav class="navbar navbar-default footer" >
         <div class="container-fluid">
             <a href="about.html">About Gamerev</a>
             <a href="terms.html">Terms of Service</a>
             <a href="profile_setting.html">Settings</a>
         </div>
     </nav>
-    </body>
-    </html>
+</body>
+</html>
