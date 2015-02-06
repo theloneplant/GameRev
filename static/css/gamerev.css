@@ -138,23 +138,15 @@
 	font-size: 16px;
 }
 
-#footer-wrapper{
-	width:100%;
-	height:auto;
+.footer{
 	background-color:#EEEEEE;
+	margin-bottom:0px;
 }
 
-#footer {
-	width:50%;
-	height:150px;
-	margin-right:auto;
-	margin-left:auto;
-}
-#footer a{
+.footer a{
 	float:left;
-	margin:50px;
+	margin:10px 30px 10px 30px;
 	text-decoration: none;
 	font-size:16px;
 	color:#000;
 }
-
