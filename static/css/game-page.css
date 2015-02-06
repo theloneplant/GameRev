@@ -7,7 +7,7 @@
 	min-height: 20vh;
 	width: 100%;
 	text-align: left;
-	padding-top: 10vh;
+	padding-top: 80px;
 	background-image: url("../images/dai-cover-wide.jpg");
 }
 
@@ -43,7 +43,11 @@
 /*---------CONTENT----------*/
 
 #game-verdict {
-	text-align: center;
+	margin-bottom: 3px;
+}
+
+#game-verdict-stats {
+	color: grey;
 }
 
 #game-info {
@@ -85,12 +89,8 @@
 	margin-right: 10px;
 }
 
-.game-review-link {
-	color: black;
-}
-
-.game-review-link:hover {
-	color: black;
+.game-excellent-review {
+	color: springgreen;
 }
 
 .game-good-review {
@@ -105,5 +105,7 @@
 	color: crimson;
 }
 
-
+.game-horrible-review {
+	color: maroon;
+}
 
