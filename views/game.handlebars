@@ -1,0 +1,199 @@
+<!doctype html>
+
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Page</title>
+ 
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/gamerev.css" rel="stylesheet">
+	<link href="/css/game-page.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body class="ng-scope" ng-controller="MainController">
+	<div id="header">
+		<div ng-include="header.url"></div>
+	</div>
+
+
+	<div id="game-title" class="cover">
+		<div class="container">
+			<table id="game-title-container">
+				<td class="game-main-thumbnail">
+					<img class="game-image img-responsive" src="images/dragonage.jpg"/>
+				</td>
+				<td id="game-title-text" valign="bottom">
+					<h1>Dragon Age: Inquisition (Example)</h1>
+				</td>
+			</table>
+		</div>
+	</div>
+
+	<div id="game-content" class="container">
+		<div class="max-width-container">
+			<h2 class="fluid-container">About</h2>
+			<hr>
+			<div id="game-info" class="container max-width-container">
+				<div class="game-info-text">
+					<strong>Developer:</strong> BioWare
+				</div>
+				<div class="game-info-text">
+					<strong>Publisher:</strong> Electronic Arts
+				</div>
+				<div class="game-info-text">
+					<strong>Release Date:</strong> November 18, 2014
+				</div>
+			</div>
+			<div id="game-description" class="container max-width-container">
+				Dragon Age: Inquisition is an action role-playing video game developed by BioWare and published by Electronic Arts. It is a sequel to Dragon Age: Origins and Dragon Age II, making it the third major game in the Dragon Age franchise.<br>In Dragon Age: Inquisition the world of Thedas is being torn apart by a massive, mysterious breach in the sky. Players must assume the role of the Inquisitor and lead a team of legendary heroes to uncover the truth behind the impending devastation.
+			</div>
+			<h3 id="game-verdict" class="text-center-horiz fluid-container">
+				Verdict: <strong class="game-good-review">Good</strong>
+			</h3>
+			<div id="game-verdict-stats" class="text-center-horiz">
+				75% of players liked this game
+			</div>
+			<hr>
+			<div id="game-reviews">
+				<h2 class="fluid-container">Reviews</h2>
+				<div id="game-reviews" class="max-width-container">
+					<div class="game-review fluid-container">
+						<a href="/profile">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="/review">
+								This is the BEST GAME EVER
+							</a>
+							 | 
+							<strong class="game-good-review">
+								Good
+							</strong>
+						</h4>
+						Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!
+					</div>
+					<div class="game-review fluid-container">
+						<a href="/profile">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="/review">
+								It's alright
+							</a>
+							 | 
+							<strong class="game-ok-review">
+								Okay
+							</strong>
+						</h4>
+						The game looks pretty and everything, but I found myself getting bored pretty often. Even though the story has its moments, I feel like there is too much down time between scenes.
+					</div>
+					<div class="game-review fluid-container">
+						<a href="/profile">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="/review">
+								This is the BEST GAME EVER
+							</a>
+							 | 
+							<strong class="game-good-review">
+								Good
+							</strong>
+						</h4>
+						Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!
+					</div>
+					<div class="game-review fluid-container">
+						<a class="game-user-profile-img" href="/profile">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="/review">
+								I HAD TO PAY MONEY FOR THIS?!?!
+							</a>
+							 | 
+							<strong class="game-bad-review">
+								Bad
+							</strong>
+						</h4>
+						WOW what a horrible game! Way too much character customization and confusing options to pick from! I wish I spent my money on a good game like Bad Rats!
+					</div>
+					<div class="game-review fluid-container">
+						<a href="/profile">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="/review">
+								This is the BEST GAME EVER
+							</a>
+							 | 
+							<strong class="game-good-review">
+								Good
+							</strong>
+						</h4>
+						Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!
+					</div>
+					<div class="game-review fluid-container">
+						<a href="/profile">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="/review">
+								This is the BEST GAME EVER
+							</a>
+							 | 
+							<strong class="game-good-review">
+								Good
+							</strong>
+						</h4>
+						Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!
+					</div>
+					<div class="game-review fluid-container">
+						<a href="/profile">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="/review">
+								It's alright
+							</a>
+							 | 
+							<strong class="game-ok-review">
+								Okay
+							</strong>
+						</h4>
+						The game looks pretty and everything, but I found myself getting bored pretty often. Even though the story has its moments, I feel like there is too much down time between scenes.
+					</div>
+					<div class="game-review fluid-container">
+						<a href="/profile">
+							<img class="game-user-profile-img" src="images/user-profile.png">
+						</a>
+						<h4>
+							<a class="game-review-link" href="/review">
+								This is the BEST GAME EVER
+							</a>
+							 | 
+							<strong class="game-good-review">
+								Good
+							</strong>
+						</h4>
+						Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!
+					</div>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div ng-include="footer.url"></div>
+	</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-Lab 2
+Lab 5
 ====
 
-Lab 2 introduces you to static HTML, CSS, and Bootstrap.
+Lab 5: Putting it together
