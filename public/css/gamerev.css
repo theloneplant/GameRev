@@ -118,6 +118,10 @@ a:hover {
 	text-align: center;
 }
 
+.display-table {
+	display: table;
+}
+
 .cover {
 	background: no-repeat center center;
 	background-size: cover;
