@@ -1,3 +1,181 @@
 {
-	"title": "GameRev"
+	"title": "GameRev",
+	"index": 
+	{
+		"featured-slider": [
+			{
+				"active": "active",
+				"id": "featured-1",
+				"href": "/games/dragon-age-inquisition",
+				"src": "/images/dai-cover.jpg"
+			},
+			{
+				"id": "featured-2",
+				"href": "/games/dragon-age-inquisition",
+				"src": "/images/dai-cover.jpg"
+			},
+			{
+				"id": "featured-3",
+				"href": "/games/dragon-age-inquisition",
+				"src": "/images/dai-cover.jpg"
+			},
+			{
+				"id": "featured-4",
+				"href": "/games/dragon-age-inquisition",
+				"src": "/images/dai-cover.jpg"
+			}
+		],
+		"top-games": [
+			{
+				"id": "game-1",
+				"href": "/games/dragon-age-inquisition"
+
+			},
+			{
+				"id": "game-2",
+				"href": "/games/dragon-age-inquisition"
+			},
+			{
+				"id": "game-3",
+				"href": "/games/dragon-age-inquisition"
+			},
+			{
+				"id": "game-4",
+				"href": "/games/dragon-age-inquisition"
+			}
+		],
+		"top-critics": [
+			{
+				"name": "Bob Jones",
+				"href": "/profile"
+			},
+			{
+				"name": "Billy Jones",
+				"href": "/profile"
+			},
+			{
+				"name": "Rob Jones",
+				"href": "/profile"
+			},
+			{
+				"name": "Willy Jones",
+				"href": "/profile"
+			},
+			{
+				"name": "Trogg Jones",
+				"href": "/profile"
+			},
+			{
+				"name": "Frog Jones",
+				"href": "/profile"
+			},
+			{
+				"name": "Potato Jones",
+				"href": "/profile"
+			},
+			{
+				"name": "Pete Jones",
+				"href": "/profile"
+			},
+			{
+				"name": "Jean Jones",
+				"href": "/profile"
+			},
+			{
+				"name": "John Jones",
+				"href": "/profile"
+			}
+		]
+	},
+	"gamepage": 
+	{
+		"games": [
+			{
+				"ref": "dragon-age-inquisition",
+				"title": "Dragon Age: Inquisition",
+				"image": "/images/dragonage.jpg",
+				"banner": "/images/dai-cover-wide.jpg",
+				"developer": "BioWare",
+				"publisher": "Electronic Arts",
+				"release-date": "November 18, 2014",
+				"description": "Dragon Age: Inquisition is an action role-playing video game developed by BioWare and published by Electronic Arts. It is a sequel to Dragon Age: Origins and Dragon Age II, making it the third major game in the Dragon Age franchise.<br>In Dragon Age: Inquisition the world of Thedas is being torn apart by a massive, mysterious breach in the sky. Players must assume the role of the Inquisitor and lead a team of legendary heroes to uncover the truth behind the impending devastation.",
+				"verdict": "Good",
+				"percentage-good": "75",
+				"reviews": [
+					{
+						"title": "This is the BEST GAME EVER",
+						"rating": "Good",
+						"summary": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"review": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"tldr": "YEAH ITS GREAT",
+						"username": "Potato Jones",
+						"timestamp": "4/20/1337"
+					},
+					{
+						"title": "It's alright",
+						"rating": "Okay",
+						"summary": "The game looks pretty and everything, but I found myself getting bored pretty often. Even though the story has its moments, I feel like there is too much down time between scenes.",
+						"review": "The game looks pretty and everything, but I found myself getting bored pretty often. Even though the story has its moments, I feel like there is too much down time between scenes.",
+						"tldr": "idk it might be worth it",
+						"username": "Frog Jones",
+						"timestamp": "4/20/1337"
+					},
+					{
+						"title": "This is the BEST GAME EVER",
+						"rating": "Good",
+						"summary": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"review": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"tldr": "YEAH ITS GREAT",
+						"username": "Potato Jones",
+						"timestamp": "4/20/1337"
+					},
+					{
+						"title": "I HAD TO PAY MONEY FOR THIS?!?!",
+						"rating": "Bad",
+						"summary": "WOW what a horrible game! Way too much character customization and confusing options to pick from! I wish I spent my money on a good game like Bad Rats!",
+						"review": "WOW what a horrible game! Way too much character customization and confusing options to pick from! I wish I spent my money on a good game like Bad Rats!",
+						"tldr": "WOW IT SUCKS",
+						"username": "Billy Jones",
+						"timestamp": "4/20/1337"
+					},
+					{
+						"title": "This is the BEST GAME EVER",
+						"rating": "Good",
+						"summary": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"review": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"tldr": "YEAH ITS GREAT",
+						"username": "Potato Jones",
+						"timestamp": "4/20/1337"
+					},
+					{
+						"title": "This is the BEST GAME EVER",
+						"rating": "Good",
+						"summary": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"review": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"tldr": "YEAH ITS GREAT",
+						"username": "Potato Jones",
+						"timestamp": "4/20/1337"
+					},
+					{
+						"title": "It's alright",
+						"rating": "Okay",
+						"summary": "The game looks pretty and everything, but I found myself getting bored pretty often. Even though the story has its moments, I feel like there is too much down time between scenes.",
+						"review": "The game looks pretty and everything, but I found myself getting bored pretty often. Even though the story has its moments, I feel like there is too much down time between scenes.",
+						"tldr": "idk it might be worth it",
+						"username": "Frog Jones",
+						"timestamp": "4/20/1337"
+					},
+					{
+						"title": "This is the BEST GAME EVER",
+						"rating": "Good",
+						"summary": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"review": "Ok so first off, just look at that cover image! I mean its so cool looking! I seriously can't believe that anyone wouldn't like this game! You can walk around, look at things, and you can even be killed by stuff!",
+						"tldr": "YEAH ITS GREAT",
+						"username": "Potato Jones",
+						"timestamp": "4/20/1337"
+					}
+				]
+			}
+		]
+	}
 }

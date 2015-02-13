@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html ng-app="app">
+<html>
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,21 +15,51 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/angular.min.js"></script>
-	<script src="js/main.js"></script>
 
 </head>
 
-<body class="ng-scope" ng-controller="MainController">
+<body>
 	<div id="header">
-		<div ng-include="header.url"></div>
+		{{{header}}}
 	</div>
 
-	<div>New Review Page</div>
-	<a href="/review">Publish</a>
+	<div class="container max-width-container">
+		<div class="form-group">
+			<label for="pwd">Select a Game</label>
+			<select class="form-control">
+				{{#each gamepage.games}}
+				<option>{{this.title}}</option>
+				{{/each}}
+			</select>
+		</div>
+		<div class="form-group">
+			<label>Title</label>
+			<input type="text" class="form-control">
+		</div>
+		<div class="form-group">
+			<label>Review Body</label>
+			<textarea class="form-control"></textarea>
+		</div>
+		<div class="form-group">
+			<label>TL;DR</label>
+			<textarea class="form-control"></textarea>
+		</div>
+		<div class="form-group">
+			<label>Rating</label>
+			<select class="form-control">
+				<option>Good</option>
+				<option>Okay</option>
+				<option>Bad</option>
+			</select>
+		</div>
+		
+		<a href="/review">
+			<button class="btn btn-default">Publish</button>
+		</a>
+	</div>
 
 	<div id="footer">
-		<div ng-include="footer.url"></div>
+		{{{footer}}}
 	</div>
 </body>
 </html>

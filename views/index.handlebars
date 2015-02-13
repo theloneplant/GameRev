@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html ng-app="app">
+<html>
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,13 +14,11 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/angular.min.js"></script>
-	<script src="js/main.js"></script>
 </head>
 
-<body class="ng-scope" ng-controller="MainController">
+<body>
 	<div id="header">
-		<div ng-include="header.url"></div>
+		{{{header}}}
 	</div>
 
 	<div id="featured-slider" class="carousel slide" data-ride="carousel">
@@ -34,26 +32,13 @@
 
 	  <!-- Wrapper for slides -->
 	  <div id="featured-slider-inner" class="carousel-inner" role="listbox">
-	    <div class="item active">
-	    	<a id="featured-1" href="/game">
-	    		<img class="featured-pane cover" src="images/dai-cover.jpg" alt="DragonAge">
-	    	</a>
-	    </div>
-	    <div class="item">
-	    	<a id="featured-2" href="/game">
-	    		<img class="featured-pane cover" src="images/dai-cover.jpg" alt="DragonAge">
-	    	</a>
-	    </div>
-	    <div class="item">
-	    	<a id="featured-3" href="/game">
-	    		<img class="featured-pane cover" src="images/dai-cover.jpg" alt="DragonAge">
-	    	</a>
-	    </div>
-	    <div class="item">
-	    	<a id="featured-4" href="/game">
-	    		<img class="featured-pane cover" src="images/dai-cover.jpg" alt="DragonAge">
-	    	</a>
-	    </div>
+	  	{{#each index.featured-slider}}
+		    <div class="item {{active}}">
+		    	<a id={{this.id}} href={{this.href}}>
+		    		<img class="featured-pane cover" src={{this.src}} alt="Game Image">
+		    	</a>
+		    </div>
+	    {{/each}}
 	  </div>
 
 	  <a class="left carousel-control" href="#featured-slider" role="button" data-slide="prev">
@@ -86,29 +71,13 @@
 	<div id="top-games"> 
 	    <div class="top-games-row row">
 	    	<ul class="container-fluid">
-	    		<a href="/game">
-		    		<li id="game-1" class="col-md-2 featured-game cover">
-		    			
-			    	</li>
-		    	</a>
-
-		    	<a href="/game">
-			    	<li id="game-2" class="col-md-2 featured-game cover">
-			    		
-			    	</li>
-		    	</a>
-
-		    	<a href="/game">
-			    	<li id="game-3" class="col-md-2 featured-game cover">
-			    		
-			    	</li>
-		    	</a>
-
-		    	<a href="/game">
-			    	<li id="game-4" class="col-md-2 featured-game cover" >
-			    		
-			    	</li>
-		    	</a>
+	    		{{#each index.top-games}}
+		    		<a href={{this.href}}>
+			    		<li id={{this.id}} class="col-md-2 featured-game cover">
+			    			
+				    	</li>
+			    	</a>
+		    	{{/each}}
 	    	</ul>
 	    </div>
 	  </div>
@@ -123,90 +92,21 @@
 	<div id="top-critics">
 		<div class="top-critics-row row">
 			<ul class="container-fluid">
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
+				{{#each index.top-critics}}
+					<li class="col-md-0 critic">
+						<div class="reviewer-img-container cover">
+							<div class="reviewer-name-container">
+								<a href={{this.href}}>{{this.name}}</a>
+							</div>
 						</div>
-					</div>
-				</li>
-
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
-						</div>
-					</div>
-				</li>
-
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
-					</div>
-				</li>
-
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
-						</div>
-					</div>
-				</li>
-
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
-						</div>
-					</div>
-				</li>
-
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
-						</div>
-					</div>
-				</li>
-
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
-						</div>
-					</div>
-				</li>
-
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
-						</div>
-					</div>
-				</li>
-
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
-						</div>
-					</div>
-				</li>
-
-				<li class="col-md-0 critic">
-					<div class="reviewer-img-container cover">
-						<div class="reviewer-name-container">
-							<a href="/profile">Bob Jones</a>
-						</div>
-					</div>
-				</li>
+					</li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>
 
 	<div id="footer">
-		<div ng-include="footer.url"></div>
+		{{{footer}}}
 	</div>
 </body>
 </html>

@@ -6,5 +6,5 @@ data.header = fs.readFileSync(path.join(__dirname, '../views/templates/header.ha
 data.footer = fs.readFileSync(path.join(__dirname, '../views/templates/footer.handlebars')).toString();
 
 module.exports = function(req, res) {
-	res.render('terms', data);
+	res.render('login', data);
 };

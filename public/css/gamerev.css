@@ -3,6 +3,7 @@ a {
 }
 
 a:hover {
+	text-decoration: none;
 	color: #333;
 }
 
@@ -94,6 +95,18 @@ a:hover {
 	background-image: url("../images/saintsrow4.jpg");
 }
 
+.game-good-review {
+	color: limegreen;
+}
+
+.game-okay-review {
+	color: gold;
+}
+
+.game-bad-review {
+	color: crimson;
+}
+
 .top-critics-row {
 	text-align: center;
 	display: table;
@@ -123,7 +136,9 @@ a:hover {
 }
 
 .cover {
-	background: no-repeat center center;
+	background-repeat: no-repeat;
+	background-position: center center;
+
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
