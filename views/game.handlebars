@@ -1,100 +1,80 @@
-<!doctype html>
+	{{{header}}}
 
-<html>
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Game Page</title>
- 
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/gamerev.css" rel="stylesheet">
-	<link href="/css/game-page.css" rel="stylesheet">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-	<div id="header">
-		{{{header}}}
-	</div>
-
-	<!--pls ignore the crazy style for this tag, gradients are dumb-->
-	<div id="game-title" class="cover" style="background-image: url('{{banner}}');
-	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(40%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.85))), url('{{banner}}') no-repeat center center;
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
-	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
-	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
-	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center; 
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;">
-		<div class="container">
-			<table id="game-title-container">
-				<td class="game-main-thumbnail">
-					<img class="game-image img-responsive" src="{{image}}"/>
-				</td>
-				<td id="game-title-text" valign="bottom">
-					<h1>{{title}}</h1>
-				</td>
-			</table>
+	<div id="main-container">
+		<!--pls ignore the crazy style for this tag, gradients are dumb-->
+		<div id="game-title" class="cover" style="background-image: url('{{banner}}');
+		background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(40%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.85))), url('{{banner}}') no-repeat center center;
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
+		background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
+		background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center; 
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;">
+			<div class="container">
+				<table id="game-title-container">
+					<td class="game-main-thumbnail">
+						<img class="game-image img-responsive" src="{{image}}"/>
+					</td>
+					<td id="game-title-text" valign="bottom">
+						<h1>{{title}}</h1>
+					</td>
+				</table>
+			</div>
 		</div>
-	</div>
 
-	<div id="game-content" class="container">
-		<div class="max-width-container">
-			<h2 class="fluid-container">About</h2>
-			<hr>
-			<div id="game-info" class="container max-width-container">
-				<div class="game-info-text">
-					<strong>Developer:</strong> {{developer}}
+		<div id="game-content" class="container">
+			<div class="max-width-container">
+				<h2 class="fluid-container">About</h2>
+				<hr>
+				<div id="game-info" class="container max-width-container">
+					<div class="game-info-text">
+						<strong>Developer:</strong> {{developer}}
+					</div>
+					<div class="game-info-text">
+						<strong>Publisher:</strong> {{publisher}}
+					</div>
+					<div class="game-info-text">
+						<strong>Release Date:</strong> {{release-date}}
+					</div>
 				</div>
-				<div class="game-info-text">
-					<strong>Publisher:</strong> {{publisher}}
+				<div id="game-description" class="container max-width-container">
+					{{{description}}}
 				</div>
-				<div class="game-info-text">
-					<strong>Release Date:</strong> {{release-date}}
+				<h3 id="game-verdict" class="text-center-horiz fluid-container">
+					Verdict: <strong class="game-good-review">{{verdict}}</strong>
+				</h3>
+				<div id="game-verdict-stats" class="text-center-horiz">
+					{{percentage-good}}% of players liked this game
 				</div>
-			</div>
-			<div id="game-description" class="container max-width-container">
-				{{{description}}}
-			</div>
-			<h3 id="game-verdict" class="text-center-horiz fluid-container">
-				Verdict: <strong class="game-good-review">{{verdict}}</strong>
-			</h3>
-			<div id="game-verdict-stats" class="text-center-horiz">
-				{{percentage-good}}% of players liked this game
-			</div>
-			<a href="/new-review" class="center-horiz display-table">
-				<button id="create-review-btn" class="btn btn-lg btn-success center-horiz">Create a Review</button>
-			</a>
-			<hr>
-			<div id="game-reviews">
-				<h2 class="fluid-container">Reviews</h2>
-				<div id="game-reviews" class="max-width-container">
-					{{#each reviews}}
-						<div class="game-review fluid-container">
-							<a href="/profile">
-								<img class="game-user-profile-img" src="/images/user-profile.png">
-							</a>
-							<h4>
-								<a class="game-review-link" href="/review">
-									{{{this.title}}}
+				<a href="/new-review" class="center-horiz display-table">
+					<button id="create-review-btn" class="btn btn-lg btn-success center-horiz">Create a Review</button>
+				</a>
+				<hr>
+				<div id="game-reviews">
+					<h2 class="fluid-container">Reviews</h2>
+					<div id="game-reviews" class="max-width-container">
+						{{#each reviews}}
+							<div class="game-review fluid-container">
+								<a href="/profile">
+									<img class="game-user-profile-img" src="/images/user-profile.png">
 								</a>
-								 | 
-								<strong class="game-{{toLowerCase this.rating}}-review">
-									{{this.rating}}
-								</strong>
-							</h4>
-							{{{this.summary}}}
-						</div>
-					{{/each}}
+								<h4>
+									<a class="game-review-link" href="/review">
+										{{{this.title}}}
+									</a>
+									 | 
+									<strong class="game-{{toLowerCase this.rating}}-review">
+										{{this.rating}}
+									</strong>
+								</h4>
+								{{{this.summary}}}
+							</div>
+						{{/each}}
+					</div>
 				</div>
 			</div>
 		</div>

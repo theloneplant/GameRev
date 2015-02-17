@@ -2,6 +2,7 @@
  * Module dependencies.
  */
 
+
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -13,6 +14,8 @@ var helpers = handlebars.create({
 		}
 	}
 });
+var Parse = require('parse').Parse;
+Parse.initialize('8ND8FWpNrWD1j2zkGymXBFAGWebC7xiuA2GT7zAk', 'tYcMRGV7XEpjFv782VzQ2ezItHVuU40vsCMZ71DU');
 
 var app = express();
 
@@ -37,7 +40,7 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-var pages = ['about', 'featured-games', 'featured-reviewers', 'login', 'logout', 'new-review', 'profile', 'profile-settings',  'review', 'search', 'subscribe', 'subscribed', 'terms'];
+var pages = ['about', 'featured-games', 'featured-reviewers', 'login', 'logout', 'signup', 'new-review', 'profile', 'profile-settings',  'review', 'search', 'subscribe', 'subscribed', 'terms'];
 
 app.get('/', require('./routes/index'));
 ['/header', '/footer'].forEach(function(thing){
@@ -47,6 +50,7 @@ app.get('/', require('./routes/index'));
 });
 
 app.get('/games/:game?', require('./routes/game'));
+app.post('/api/:call?', require('./routes/api/main'));
 
 pages.forEach(function(page) {
 	app.get('/' + page, require('./routes/' + page));

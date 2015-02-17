@@ -1,40 +1,76 @@
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-	<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#toggle-header">
-		    <span class="sr-only">Toggle navigation</span>
-		    <span class="icon-bar"></span>
-		    <span class="icon-bar"></span>
-		    <span class="icon-bar"></span>
-		  </button>
-		  <a class="navbar-brand" href="/">GameRev</a>
-		</div>
+<!doctype html>
 
-		<div id="toggle-header" class="collapse navbar-collapse">
-			<form class="search-bar navbar-form navbar-left" role="search">
-		        <div class="search-bar input-group">
-		            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-		            <div class="input-group-btn">
-		            	<a href="/search"
-		                	<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-		            	</a>
-		            </div>
-		        </div>
-		    </form>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
 
-		    <ul class="nav navbar-nav navbar-right">
-		        <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Username<span class="caret"></span></a>
-		        <ul class="dropdown-menu" role="menu">
-		            <li><a href="/profile">Account</a></li>
-		            <li><a href="/new-review">Create a Review</a></li>
-		            <li><a href="/profile-settings">Settings</a></li>
-		            <li class="divider"></li>
-		            <li><a href="/logout">Logout</a></li>
-		          </ul>
-		        </li>
-		    </ul>
-		</div>
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/quill.base.css" rel="stylesheet">
+	<link href="/css/quill.snow.css" rel="stylesheet">
+	<link href="/css/gamerev.css" rel="stylesheet">
+
+	<script src="/js/jquery-1.11.0.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/quill.js" type="text/javascript"></script>
+	<script src="/js/header-controller.js" type="text/javascript"></script>
+	{{#if loadScript}}
+	<script src="/js/{{page}}-controller.js" type="text/javascript"></script>
+	{{/if}}
+</head>
+
+<body>
+	<div id="header">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#toggle-header">
+				    <span class="sr-only">Toggle navigation</span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				  </button>
+				  <a id="logo" class="navbar-brand animate" href="/">GameRev</a>
+				</div>
+
+				<div id="toggle-header" class="collapse navbar-collapse">
+					<form id="search-bar" class="navbar-form navbar-left input-group" role="search">
+						<div id="search-group" class="form-group">
+							<input id="search-form" class="form-control" placeholder="Search games & users" type="text">
+							<div class="input-group-btn">
+								<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+							</div>
+						</div>
+					</form>
+
+				    <ul class="nav navbar-nav navbar-right">
+				    	{{#if loggedIn}}
+				        <li class="dropdown">
+				          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{username}}<span class="caret"></span></a>
+					        <ul class="dropdown-menu" role="menu">
+					            <li><a href="/profile">Profile</a></li>
+					            <li><a id="profile-settings-button" href="/profile-settings">Settings</a></li>
+					            <li><a id="logout-button">Logout</a></li>
+					            <li class="divider"></li>
+					            <li><a href="/new-review">Create a Review</a></li>
+					        </ul>
+				        </li>
+				        {{else}}
+	                    <li>
+	                    	<a id="header-login" class="link display-inline-block" href="/login">Login</a>
+	                    	or
+	                    	<a id="header-signup" class="link display-inline-block" href="/signup">Create an Account</a>
+	                    </li>
+				        {{/if}}
+				    </ul>
+				</div>
+			</div>
+		</nav>
 	</div>
-</nav>
+
+<!--Continue the page in other files-->

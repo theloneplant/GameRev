@@ -1,5 +1,4 @@
 var data = require('../data.json');
-var fs = require('fs');
 var path = require('path');
 var derp = false;
 
@@ -10,11 +9,9 @@ module.exports = function(req, res) {
 			derp = data.gamepage.games[i];
 		}
 	});
-	derp.header = fs.readFileSync(path.join(__dirname, '../views/templates/header.handlebars')).toString();
-	derp.footer = fs.readFileSync(path.join(__dirname, '../views/templates/footer.handlebars')).toString();
 
 	if (derp) {
-		res.render('game', derp);
+		require(path.join(__dirname, 'header')).renderPage(req, res, 'game', derp);
 		derp = false;
 	}
 	else {

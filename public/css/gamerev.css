@@ -1,23 +1,94 @@
+/*
+COLOR SCHEME:
+Dark Primary: #388E3C
+Primary Primary: #4CAF50
+Light Primary: #C8E6C9
+Accent: #FF5722
+Text: #212121
+Light Text: #FFFFFF
+Secondary Text: #727272
+Divider: #B6B6B6
+*/
+
+html, body {
+	min-height: 100%;
+	color: #212121;
+}
+
 a {
-	color: #333;
+	color: #212121;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #333;
+	color: #212121;
 }
 
-.featured-pane {
-	width: 100%;
-	height: 100%;
+.link {
+	color: #4CAF50 !important;
 }
 
-.search-bar {
-	width: 75%;
+.link:hover {
+	color: #388E3C !important;
+}
+
+.btn:active {
+  
+}
+
+.btn:focus {
+  
+}
+
+.form-control:focus {
+	border-color: #4CAF50 !important;
+	-webkit-box-shadow: 0 0 10px #C8E6C9 !important;
+    -moz-box-shadow: 0 0 10px #C8E6C9 !important;
+    box-shadow: 0 0 10px #C8E6C9 !important;
+}
+
+/*-----HEADER-----*/
+#logo {
+	color: #212121;
+}
+
+#logo:hover {
+	color: #4CAF50;
 }
 
 .navbar {
 	margin-bottom: 0;
+}
+
+#header-login {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#header-signup {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#search-bar {
+	display: block;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#search-group {
+}
+
+#search-form {
+	width: calc(100% - 40px);
+}
+
+/*-----HOME PAGE-----*/
+
+.featured-pane {
+	width: 100%;
+	height: 100%;
 }
 
 #featured-slider {
@@ -26,22 +97,6 @@ a:hover {
 
 #featured-slider-inner {
 	max-height: 650px;
-}
-
-#featured-1 {
-	
-}
-
-#featured-2 {
-	
-}
-
-#featured-3 {
-	
-}
-
-#featured-4 {
-	
 }
 
 #create-review {
@@ -95,16 +150,95 @@ a:hover {
 	background-image: url("../images/saintsrow4.jpg");
 }
 
-.game-good-review {
-	color: limegreen;
+/*-----GAME PAGE-----*/
+#game-content {
+	
 }
 
-.game-okay-review {
-	color: gold;
+#game-title {
+	display: table;
+	min-height: 20vh;
+	width: 100%;
+	text-align: left;
+	padding-top: 80px;
 }
 
-.game-bad-review {
-	color: crimson;
+#game-title-container {
+	height: 100%;
+}
+
+.game-main-thumbnail {
+	display: table-cell;
+	float: left;
+	width: 140px;
+	margin-right: 30px;
+}
+
+.game-image {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 10px 5px limegreen;
+	margin-bottom: 15px;
+}
+
+#game-title-text {
+	display: table-cell;
+	bottom: 0px;
+	vertical-align: bottom;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 15px;
+	color: white;
+	text-shadow: 0 0 15px black;
+}
+
+/*---------CONTENT----------*/
+
+#game-verdict {
+	margin-bottom: 3px;
+}
+
+#game-verdict-stats {
+	color: grey;
+}
+
+#game-info {
+	align: center;
+	margin: 0px auto;
+}
+
+.game-info-text {
+	margin-bottom: 5px;
+}
+
+#game-description {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#game-reviews {
+	
+}
+
+.game-review {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 15px;
+}
+
+.game-review h4 {
+	margin: 0;
+}
+
+.game-review:hover {
+	box-shadow: 0 0 0 1px lightgrey;
+}
+
+.game-user-profile-img {
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 10px;
 }
 
 .top-critics-row {
@@ -121,6 +255,27 @@ a:hover {
 	margin-right: 15px;
 }
 
+/*-----GLOBAL STYLE-----*/
+
+.game-good-review {
+	color: limegreen;
+}
+
+.game-okay-review {
+	color: gold;
+}
+
+.game-bad-review {
+	color: crimson;
+}
+
+.animate {
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+
 .center-horiz {
     margin-left: auto;
     margin-right: auto;
@@ -133,6 +288,10 @@ a:hover {
 
 .display-table {
 	display: table;
+}
+
+.display-inline-block {
+	display: inline-block !important;
 }
 
 .cover {
@@ -165,12 +324,18 @@ a:hover {
 	font-size: 16px;
 }
 
-.footer{
+#main-container {
+	width: 100%;
+	height: 100%;
+}
+
+#footer {
+	width: 100%;
 	background-color:#EEEEEE;
 	margin-bottom:0px;
 }
 
-.footer a{
+#footer a {
 	float:left;
 	margin:10px 30px 10px 30px;
 	text-decoration: none;
