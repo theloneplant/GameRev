@@ -40,7 +40,7 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-var pages = ['about', 'featured-games', 'featured-reviewers', 'login', 'logout', 'signup', 'new-review', 'profile', 'profile-settings',  'review', 'search', 'subscribe', 'subscribed', 'terms'];
+var pages = ['about', 'featured-games', 'featured-reviewers', 'login', 'logout', 'signup', 'new-review', 'user-settings',  'search', 'subscribe', 'subscribed', 'terms'];
 
 app.get('/', require('./routes/index'));
 ['/header', '/footer'].forEach(function(thing){
@@ -49,7 +49,9 @@ app.get('/', require('./routes/index'));
 	});
 });
 
-app.get('/games/:game?', require('./routes/game'));
+app.get('/games/:game?', require('./routes/games'));
+app.get('/reviews/:review?', require('./routes/reviews'));
+app.get('/users/:user?', require('./routes/users'));
 app.post('/api/:call?', require('./routes/api/main'));
 
 pages.forEach(function(page) {

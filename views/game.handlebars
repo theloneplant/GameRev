@@ -17,7 +17,7 @@
 			<div class="container">
 				<table id="game-title-container">
 					<td class="game-main-thumbnail">
-						<img class="game-image img-responsive" src="{{image}}"/>
+						<img class="game-image img-responsive {{toLowerCase verdict}}" src="{{image}}"/>
 					</td>
 					<td id="game-title-text" valign="bottom">
 						<h1>{{title}}</h1>
@@ -38,20 +38,20 @@
 						<strong>Publisher:</strong> {{publisher}}
 					</div>
 					<div class="game-info-text">
-						<strong>Release Date:</strong> {{release-date}}
+						<strong>Release Date:</strong> {{releaseDate}}
 					</div>
 				</div>
 				<div id="game-description" class="container max-width-container">
 					{{{description}}}
 				</div>
 				<h3 id="game-verdict" class="text-center-horiz fluid-container">
-					Verdict: <strong class="game-good-review">{{verdict}}</strong>
+					Verdict: <strong class="game-{{toLowerCase verdict}}-review">{{verdict}}</strong>
 				</h3>
 				<div id="game-verdict-stats" class="text-center-horiz">
-					{{percentage-good}}% of players liked this game
+					{{percentageGood}}% of players liked this game
 				</div>
 				<a href="/new-review" class="center-horiz display-table">
-					<button id="create-review-btn" class="btn btn-lg btn-success center-horiz">Create a Review</button>
+					<button id="create-review-btn" class="btn btn-lg btn-info center-horiz">Create a Review</button>
 				</a>
 				<hr>
 				<div id="game-reviews">
@@ -63,7 +63,7 @@
 									<img class="game-user-profile-img" src="/images/user-profile.png">
 								</a>
 								<h4>
-									<a class="game-review-link" href="/review">
+									<a class="game-review-link" href="/reviews/{{this.id}}">
 										{{{this.title}}}
 									</a>
 									 | 

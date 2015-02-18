@@ -1,13 +1,17 @@
 /*
 COLOR SCHEME:
-Dark Primary: #388E3C
-Primary Primary: #4CAF50
-Light Primary: #C8E6C9
-Accent: #FF5722
+Dark Primary: #1976D2
+Primary Primary: #2196F3
+Light Primary: #BBDEFB
+Accent: #FFC107
 Text: #212121
 Light Text: #FFFFFF
 Secondary Text: #727272
 Divider: #B6B6B6
+
+Red: #F44336;
+Yellow: #FFC107;
+Green: #4CAF50;
 */
 
 html, body {
@@ -25,35 +29,132 @@ a:hover {
 }
 
 .link {
-	color: #4CAF50 !important;
+	color: #2196F3 !important;
 }
 
 .link:hover {
-	color: #388E3C !important;
+	color: #1976D2 !important;
+}
+
+.white-link {
+	color: #FFFFFF !important;
+}
+
+.white-link:hover {
+	color: #BBDEFB !important;
+}
+
+input {
+	border-radius: 0px !important;
+}
+
+.btn {
+	border-radius: 0px !important;
 }
 
 .btn:active {
-  
+	
 }
 
 .btn:focus {
   
 }
 
+.btn-default {
+	background-color: #FFFFFF;
+	background-image: none;
+	border: none;
+}
+
+.btn-default:hover {
+	background-color: #FFFFFF;
+	border: none;
+}
+
+.btn-info {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: none;
+	background-color: #2196F3;
+	border-radius: 0px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.btn-info:hover {
+	background-image: none;
+	background-color: #2196F3;
+}
+
+.form-control {
+	border: none !important;
+	box-shadow: none;
+}
+
 .form-control:focus {
-	border-color: #4CAF50 !important;
-	-webkit-box-shadow: 0 0 10px #C8E6C9 !important;
-    -moz-box-shadow: 0 0 10px #C8E6C9 !important;
-    box-shadow: 0 0 10px #C8E6C9 !important;
+	border: none !important;
+	box-shadow: none;
+}
+
+.z-none {
+	box-shadow: none !important;
+	z-index: 0;
+}
+
+.z0 {
+	box-shadow: 0 0 3px rgba(0, 0, 0, .3) !important;
+	z-index: 0;
+}
+
+.z1 {
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .4) !important;
+	z-index: 1;
+}
+
+.z2 {
+	box-shadow: 0 2px 10px rgba(0, 0, 0, .35) !important;
+	z-index: 2;
+}
+
+.z3 {
+	box-shadow: 0 3px 15px rgba(0, 0, 0, .25) !important;
+	z-index: 3;
+}
+
+.z4 {
+	box-shadow: 0 4px 20px rgba(0, 0, 0, .3) !important;
+	z-index: 4;
+}
+
+.z5 {
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .3) !important;
+	z-index: 5;
 }
 
 /*-----HEADER-----*/
+#header-wrapper {
+	border: none;
+	z-index: 5;
+}
+
+#header-container {
+	background-color: #FFFFFF;
+	color: #727272;
+}
+
 #logo {
-	color: #212121;
+	height: 70px;
+	color: #FFFFFF;
+	background-color: #2196F3;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	line-height: 70px;
+	font-size: 20px;
 }
 
 #logo:hover {
-	color: #4CAF50;
+	color: #BBDEFB;
 }
 
 .navbar {
@@ -70,6 +171,11 @@ a:hover {
 	padding-right: 0px;
 }
 
+#header-search-button {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
 #search-bar {
 	display: block;
 	width: 50%;
@@ -82,6 +188,10 @@ a:hover {
 
 #search-form {
 	width: calc(100% - 40px);
+}
+
+#toggle-header {
+	padding-top: 10px;
 }
 
 /*-----HOME PAGE-----*/
@@ -177,8 +287,19 @@ a:hover {
 .game-image {
 	width: 100%;
 	height: 100%;
-	box-shadow: 0 0 10px 5px limegreen;
 	margin-bottom: 15px;
+}
+
+.game-image.good {
+	box-shadow: 0 0 10px 5px #4CAF50;
+}
+
+.game-image.okay {
+	box-shadow: 0 0 10px 5px #FFC107;
+}
+
+.game-image.bad {
+	box-shadow: 0 0 10px 5px #F44336;
 }
 
 #game-title-text {
@@ -191,6 +312,22 @@ a:hover {
 	color: white;
 	text-shadow: 0 0 15px black;
 }
+
+/*-----NEW REVIEW PAGE-----*/
+#toolbar {
+	margin-top: 20px;
+	border-bottom: 1px solid #B6B6B6;
+}
+
+#editor {
+	min-height: 400px;
+	margin-bottom: 20px;
+}
+
+.rating-button {
+
+}
+
 
 /*---------CONTENT----------*/
 
@@ -258,22 +395,22 @@ a:hover {
 /*-----GLOBAL STYLE-----*/
 
 .game-good-review {
-	color: limegreen;
+	color: #4CAF50;
 }
 
 .game-okay-review {
-	color: gold;
+	color: #FFC107;
 }
 
 .game-bad-review {
-	color: crimson;
+	color: #F44336;
 }
 
 .animate {
-	-webkit-transition: all .25s ease-in-out;
-	-moz-transition: all .25s ease-in-out;
-	-o-transition: all .25s ease-in-out;
-	transition: all .25s ease-in-out;
+	-webkit-transition: all .15s ease-in-out;
+	-moz-transition: all .15s ease-in-out;
+	-o-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
 }
 
 .center-horiz {

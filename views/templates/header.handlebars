@@ -25,8 +25,8 @@
 
 <body>
 	<div id="header">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
+		<nav id="header-wrapper" class="navbar navbar-default">
+			<div id="header-container" class="z4 container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#toggle-header">
@@ -40,10 +40,10 @@
 
 				<div id="toggle-header" class="collapse navbar-collapse">
 					<form id="search-bar" class="navbar-form navbar-left input-group" role="search">
-						<div id="search-group" class="form-group">
+						<div id="search-group" class="z0 form-group">
 							<input id="search-form" class="form-control" placeholder="Search games & users" type="text">
 							<div class="input-group-btn">
-								<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+								<button id="header-search-button" type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
 							</div>
 						</div>
 					</form>
@@ -53,8 +53,8 @@
 				        <li class="dropdown">
 				          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{username}}<span class="caret"></span></a>
 					        <ul class="dropdown-menu" role="menu">
-					            <li><a href="/profile">Profile</a></li>
-					            <li><a id="profile-settings-button" href="/profile-settings">Settings</a></li>
+					            <li><a href="/users/">Profile</a></li>
+					            <li><a id="user-settings-button" href="/user-settings">Settings</a></li>
 					            <li><a id="logout-button">Logout</a></li>
 					            <li class="divider"></li>
 					            <li><a href="/new-review">Create a Review</a></li>

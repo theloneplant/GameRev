@@ -31,25 +31,48 @@ this.addReview = function(req, res) {
 			var reviewGameRelation = review.relation('game');
 			reviewGameRelation.add(game);
 
-			// Save the review and add relations going back from user and game to review
-			review.save(null, {
-				success: function(result) {
-					console.log(result.id);
+			if (req.body.newReview.rating === 'Good') {
+				game.increment('totalRating', 1);
+			}
+			else if (req.body.newReview.rating === 'Okay') {
+				game.increment('totalRating', 0.5);
+			}
+			// Otherwise it's a bad review, don't increment
 
-					// Add relation from user to review
-					userReviewRelation.add(result);
-					user.save();
+			game.relation('reviews').query().find({
+				success: function(reviews) {
+					var totalRating = (100 * game.get('totalRating') / reviews.length).toFixedDown(1);
+					if (totalRating < 34) {
+						game.set('verdict', 'Bad');
+					}
+					else if (totalRating < 67) {
+						game.set('verdict', 'Okay');
+					}
+					else {
+						game.set('verdict', 'Good');
+					}
 
-					// Add relation from game to review
-					gameReviewRelation.add(result);
-					game.save();
-				},
-				error: function(result, error) {
-					console.log("review error: ", error.message);
+					// Save the review and add relations going back from user and game to review
+					review.save(null, {
+						success: function(result) {
+							console.log(result.id);
+
+							// Add relation from user to review
+							userReviewRelation.add(result);
+							user.save();
+
+							// Add relation from game to review
+							gameReviewRelation.add(result);
+							game.save();
+						},
+						error: function(result, error) {
+							console.log("review error: ", error.message);
+						}
+					});
 				}
 			});
 		},
-		error: function(result, error) {
+		error: function(error) {
 			console.log("game error: ", error.message);
 		}
 	});
@@ -61,4 +84,10 @@ var basicResponse = function(res, $success, $data) {
 		success : $success,
 		data    : $data
 	});
+};
+
+Number.prototype.toFixedDown = function(digits) {
+    var re = new RegExp("(\\d+\\.\\d{" + digits + "})(\\d)"),
+        m = this.toString().match(re);
+    return m ? parseFloat(m[1]) : this.valueOf();
 };
