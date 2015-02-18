@@ -29,7 +29,7 @@ module.exports = function(req, res) {
 					});
 
 
-					Parse.Promise.when(userQueries).then(function() {
+					Parse.Promise.when(userQueries).then(function(poop) {
 						for (var i = 0; i < arguments.length; i++) {
 							// Format a summary for each review
 							var summary = reviews[i].get('reviewBody').replace(/<(?:.|\n)*?>/gm, '');
@@ -50,14 +50,13 @@ module.exports = function(req, res) {
 								review: reviews[i].get('review'),
 								tldr: reviews[i].get('tldr'),
 								user: {
-									username: arguments[i].username
+									username: arguments[i][0].get('username')
 									// Add more to user later on
 								},
 								timestamp: reviews[i].createdAt
 							});
 						}
 						
-						console.log(data);
 						require(path.join(__dirname, 'header')).renderPage(req, res, 'game', data);
 					});
 				}

@@ -447,6 +447,10 @@ input {
 	margin: auto;
 }
 
+.min-height-container {
+	min-height: calc(100vh - 70px - 50px);
+}
+
 .reviewer-img-container {
 	position: relative;
 	background-image: url("../images/user-profile.png");

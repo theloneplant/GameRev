@@ -1,0 +1,34 @@
+    {{{header}}}
+
+    <div id="main-container">
+        <div class="min-height-container max-width-container">
+            <h2>{{username}}</h2>
+            <p>{{email}}</p>
+
+            <br><br>
+
+            {{#each reviews}}
+            <div class="game-review fluid-container">
+                <a href="/users/{{this.user.username}}">
+                    <img class="game-user-profile-img" src="/images/user-profile.png">
+                </a>
+                <h4>
+                    <a class="game-review-link" href="/reviews/{{this.id}}">
+                        {{{this.title}}}
+                    </a>
+                     | 
+                    <strong class="game-{{toLowerCase this.rating}}-review">
+                        {{this.rating}}
+                    </strong>
+                </h4>
+                {{{this.summary}}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div id="footer">
+        {{{footer}}}
+    </div>
+</body>
+</html>
