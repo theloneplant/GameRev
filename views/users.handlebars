@@ -2,14 +2,14 @@
 
     <div id="main-container">
         <div class="min-height-container max-width-container">
-            <h2>{{username}}</h2>
+            <h2>{{myUsername}}</h2>
             <p>{{email}}</p>
 
             <br><br>
 
             {{#each reviews}}
             <div class="game-review fluid-container">
-                <a href="/users/{{this.user.username}}">
+                <a href="/users/{{username}}">
                     <img class="game-user-profile-img" src="/images/user-profile.png">
                 </a>
                 <h4>

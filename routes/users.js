@@ -13,7 +13,7 @@ module.exports = function(req, res) {
 				success: function(reviews) {
 					var data = {
 						id: user.id,
-						username: user.get('username'),
+						myUsername: user.getUsername(),
 						email: user.get('email'),
 						reviews: []
 					};
