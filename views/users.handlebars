@@ -7,11 +7,10 @@
 
             <br><br>
 
+            <h3>Reviews</h3>
+            <hr>
             {{#each reviews}}
             <div class="game-review fluid-container">
-                <a href="/users/{{username}}">
-                    <img class="game-user-profile-img" src="/images/user-profile.png">
-                </a>
                 <h4>
                     <a class="game-review-link" href="/reviews/{{this.id}}">
                         {{{this.title}}}
