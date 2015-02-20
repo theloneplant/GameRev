@@ -47,43 +47,43 @@
 		"top-critics": [
 			{
 				"name": "Bob Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			},
 			{
 				"name": "Billy Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			},
 			{
 				"name": "Rob Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			},
 			{
 				"name": "Willy Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			},
 			{
 				"name": "Trogg Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			},
 			{
 				"name": "Frog Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			},
 			{
 				"name": "Potato Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			},
 			{
 				"name": "Pete Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			},
 			{
 				"name": "Jean Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			},
 			{
 				"name": "John Jones",
-				"href": "/profile"
+				"href": "/users/g"
 			}
 		]
 	},
