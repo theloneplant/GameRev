@@ -359,6 +359,11 @@ input {
 }
 
 /*-----NEW REVIEW PAGE-----*/
+#new-review-form {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
 #toolbar {
 	margin-top: 20px;
 	border-bottom: 1px solid #B6B6B6;

@@ -4,7 +4,7 @@
 		<div id="new-review-form" class="container max-width-container">
 			<div class="form-group">
 				<label for="pwd">Select a Game</label>
-				<select name="game" class="form-control">
+				<select name="game" class="z1 form-control">
 					{{#each gamepage.games}}
 					<option>{{this.title}}</option>
 					{{/each}}
@@ -12,9 +12,9 @@
 			</div>
 			<div class="form-group">
 				<label>Title</label>
-				<input name="title" type="text" class="form-control">
+				<input name="title" type="text" class="z1 form-control">
 			</div>
-			<div id="review-container" class="z2">
+			<div id="review-container" class="z1">
 			  <div class="quill-wrapper" data-toggle="tooltip" data-placement="left" title="Write your review here">
 			    <div id="toolbar" class="toolbar">
 			      <span class="ql-format-group">
@@ -104,7 +104,7 @@
 
 			<div class="form-group">
 				<label>TL;DR</label>
-				<textarea name="tldr" class="form-control"></textarea>
+				<textarea name="tldr" class="z1 form-control"></textarea>
 			</div>
 			<div class="form-group">
 				<label>Rating</label>
@@ -113,7 +113,7 @@
 				<input class="rating-button" name="rating" value="Bad" type="radio">Bad</input>
 			</div>
 			
-			<button id="publish-button" class="btn btn-default">Publish</button>
+			<button id="publish-button" class="z1 btn btn-default">Publish</button>
 		</div>
 	</div>
 
