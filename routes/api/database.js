@@ -52,6 +52,8 @@ this.addReview = function(req, res) {
 						game.set('verdict', 'Good');
 					}
 
+					console.log(game.get('totalRating'), ' - ', reviews.length);
+
 					// Save the review and add relations going back from user and game to review
 					review.save(null, {
 						success: function(result) {

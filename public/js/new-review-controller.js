@@ -31,6 +31,8 @@ $(document).ready(function() {
 			data: reviewJSON,
 			success: function(data) {
 				console.log(data);
+				history.go(-1);
+				window.location.reload();
 			}
 		});
 	});
