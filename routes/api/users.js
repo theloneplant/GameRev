@@ -13,10 +13,7 @@ this.processSignup = function(req, res) {
 			basicResponse(res, true);
 		},
 		error: function(user, error) {
-			basicResponse(res, false, { error: error.code });
-
-			// Show the error message somewhere and let the user try again.
-			console.log("Error: " + error.code + " " + error.message);
+			basicResponse(res, false, { error: error.message });
 		}
 	});
 };

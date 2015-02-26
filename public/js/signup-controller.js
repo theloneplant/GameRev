@@ -18,7 +18,14 @@ $(document).ready(function() {
 				success: function(data) {
 					newUser.password = null;
 					delete newUser.password;
-					window.location.href = '/';
+
+					if (data.success) {
+						window.location.href = '/';
+					}
+					else {
+						$("#error-alert").addClass('show');
+						$("#error-alert").text(data.info.error);
+					}
 				}
 			});
 		}

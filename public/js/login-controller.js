@@ -19,6 +19,9 @@ $(document).ready(function() {
 					console.log(data.info);
 					window.location.href = '/';
 				}
+				else {
+					$("#error-alert").addClass('show');
+				}
 			}
 		});
 	});

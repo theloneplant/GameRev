@@ -50,10 +50,14 @@ input {
 
 .btn {
 	border-radius: 0px !important;
+	-webkit-transition: all .15s ease-in-out;
+	-moz-transition: all .15s ease-in-out;
+	-o-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
 }
 
 .btn:active {
-	
+	box-shadow: none;
 }
 
 .btn:focus {
@@ -86,7 +90,6 @@ input {
 }
 
 .form-control {
-
 	border: none !important;
 	box-shadow: none;
 	box-shadow: 0 0 3px rgba(0, 0, 0, .3) !important;
@@ -455,6 +458,19 @@ input {
 
 .game-bad-review {
 	color: #F44336;
+}
+
+#error-alert {
+	background-image: none;
+	background-color: #F44336;
+	border-radius: 0px;
+	text-align: center;
+	color: #FFFFFF;
+	display: none;
+}
+
+#error-alert.show {
+	display: block;
 }
 
 .animate {
