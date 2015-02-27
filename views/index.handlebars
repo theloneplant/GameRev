@@ -53,25 +53,41 @@
 
 		<div class="container-fluid">
 			<ul id="staff-picks" class="max-width-container center horiz">
-				<li class="z1 index-tile cover" data="/games/dragon-age-inquisition">
+				<li class="z1 index-tile cover" data="/games/skyrim"
+				style="background-image: url('/images/skyrim.jpg')">
 					<div class="index-game-title animate">
-						Dragon Age: Inquisition Stuff
+						The Elder Scrolls V: Skyrim
 					</div>
 				</li>
-				<li class="z1 index-tile cover">
-					
+				<li class="z1 index-tile cover" data="/games/farcry4"
+				style="background-image: url('/images/farcry4-banner.jpg')">
+					<div class="index-game-title animate">
+						Far Cry 4
+					</div>
 				</li>
-				<li class="z1 index-tile cover">
-					
+				<li class="z1 index-tile cover" data="/games/gtav"
+				style="background-image: url('/images/gta5-banner.jpg')">
+					<div class="index-game-title animate">
+						Grand Theft Auto 5
+					</div>
 				</li>
-				<li class="z1 index-tile cover">
-					
+				<li class="z1 index-tile cover" data="/games/dragon-age-inquisition"
+				style="background-image: url('/images/dai-cover-wide.jpg')">
+					<div class="index-game-title animate">
+						Dragon Age: Inquisition
+					</div>
 				</li>
-				<li class="z1 index-tile cover">
-					
+				<li class="z1 index-tile cover" data="/games/final-fantasy-XV"
+				style="background-image: url('/images/finalfantasyxv.jpg')">
+					<div class="index-game-title animate">
+						Final Fantasy XV
+					</div>
 				</li>
-				<li class="z1 index-tile cover">
-					
+				<li class="z1 index-tile cover" data="/games/revelations"
+				style="background-image: url('/images/revelations.jpg')">
+					<div class="index-game-title animate">
+						Resident Evil Revelation
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -88,10 +104,11 @@
 			<ul id="staff-picks" class="max-width-container center horiz">
 				{{#each reviews}}
 				<li class="z1 index-tile cover" data="/reviews/{{this.id}}" 
-				style="background-image: url('{{this.bannerImage}}');">
-					<div class="index-review-title animate {{toLowerCase this.rating}}">
+				style="background-image: url('{{this.bannerImage}}')">
+					<div class="index-review-title animate-slow {{toLowerCase this.rating}}">
 						<div class="review-tile-title">{{this.title}}</div>
 						<div class="review-tile-summary">{{this.summary}}</div>
+						<div class="review-tile-game">{{this.game.title}}</div>
 					</div>
 				</li>
 				{{/each}}

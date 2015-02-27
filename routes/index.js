@@ -21,7 +21,7 @@ module.exports = function(req, res) {
 					id: review.id,
 					title: review.get('title'),
 					rating: review.get('rating'),
-					summary: createSummary(review.get('reviewBody'), 200),
+					summary: createSummary(review.get('reviewBody'), 170),
 					tldr: review.get('tldr'),
 					bannerImage: review.get('bannerImage'),
 					game: {

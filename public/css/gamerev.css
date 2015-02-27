@@ -328,15 +328,15 @@ input {
 }
 
 .index-review-title.good {
-	border-top: 4px solid rgba(0, 255, 0, 1);
+	border-top: 4px solid rgba(76, 175, 80, 1);
 }
 
 .index-review-title.okay {
-	border-top: 4px solid rgba(255, 255, 0, 1);
+	border-top: 4px solid rgba(255, 193, 7, 1);
 }
 
 .index-review-title.bad {
-	border-top: 4px solid rgba(255, 0, 0, 1);
+	border-top: 4px solid rgba(244, 67, 54, 1);
 }
 
 .index-game-title.show {
@@ -365,7 +365,16 @@ input {
 	font-size: 14px;
 }
 
-@media only screen and (max-device-width: 550px) {
+.review-tile-game {
+	position: absolute;
+	bottom: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #727272;
+	font-size: 14px;
+}
+
+@media only screen and (max-device-width: 1024px) {
 	.index-game-title {
 		-webkit-transform: translateY(0%);
 		-moz-transform: translateY(0%);
@@ -569,6 +578,13 @@ input {
 	-moz-transition: all .15s ease-in-out;
 	-o-transition: all .15s ease-in-out;
 	transition: all .15s ease-in-out;
+}
+
+.animate-slow {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
 }
 
 .center-horiz {
