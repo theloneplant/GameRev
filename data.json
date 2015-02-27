@@ -23,6 +23,11 @@
 				"id": "featured-4",
 				"href": "/games/final-fantasy-XV",
 				"src": "/images/finalfantasyxv_banner.jpg"
+			},
+			{
+				"id": "featured-5",
+				"href": "/games/revelations",
+				"src": "/images/revelations_banner.png"
 			}
 		],
 		"top-games": [
