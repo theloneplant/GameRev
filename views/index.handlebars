@@ -43,47 +43,59 @@
 			</div>
 		</div>
 
-		<div class="container-fluid">
-			<h3 class="featured-header">
-				<a href="/featured-games">Featured Games</a>
-			</h3>
-		</div>
-		
-		<div id="top-games"> 
-		    <div class="top-games-row row">
-		    	<ul class="container-fluid">
-		    		{{#each index.top-games}}
-			    		<a href={{this.href}}>
-				    		<li id={{this.id}} class="col-md-2 featured-game cover">
-				    			
-					    	</li>
-				    	</a>
-			    	{{/each}}
-		    	</ul>
-		    </div>
-		  </div>
+		<div id="staff-picks-wrapper" class="z1 index-title container-fluid">
+			<div class="max-width-container center-horiz">
+				<h2 id="staff-picks-header" class="container-fluid">
+					Staff Picks
+				</h2>
+			</div>
 		</div>
 
 		<div class="container-fluid">
-			<h3 class="featured-header">
-				<a href="/featured-reviewers">Featured Reviewers</a>
-			</h3>
+			<ul id="staff-picks" class="max-width-container center horiz">
+				<li class="z1 index-tile cover" data="/games/dragon-age-inquisition">
+					<div class="index-game-title animate">
+						Dragon Age: Inquisition Stuff
+					</div>
+				</li>
+				<li class="z1 index-tile cover">
+					
+				</li>
+				<li class="z1 index-tile cover">
+					
+				</li>
+				<li class="z1 index-tile cover">
+					
+				</li>
+				<li class="z1 index-tile cover">
+					
+				</li>
+				<li class="z1 index-tile cover">
+					
+				</li>
+			</ul>
 		</div>
-		
-		<div id="top-critics">
-			<div class="top-critics-row row">
-				<ul class="container-fluid">
-					{{#each index.top-critics}}
-						<li class="col-md-0 critic">
-							<div class="reviewer-img-container cover">
-								<div class="reviewer-name-container">
-									<a href={{this.href}}>{{this.name}}</a>
-								</div>
-							</div>
-						</li>
-					{{/each}}
-				</ul>
+
+		<div id="top-reviews-wrapper" class="z1 index-title container-fluid">
+			<div class="max-width-container center-horiz">
+				<h2 id="staff-picks-header" class="container-fluid">
+					Top Reviews
+				</h2>
 			</div>
+		</div>
+
+		<div class="container-fluid">
+			<ul id="staff-picks" class="max-width-container center horiz">
+				{{#each reviews}}
+				<li class="z1 index-tile cover" data="/reviews/{{this.id}}" 
+				style="background-image: url('{{this.bannerImage}}');">
+					<div class="index-review-title animate {{toLowerCase this.rating}}">
+						<div class="review-tile-title">{{this.title}}</div>
+						<div class="review-tile-summary">{{this.summary}}</div>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
 		</div>
 	</div>
 
