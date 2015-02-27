@@ -304,12 +304,8 @@ input {
 	bottom: 0px;
 	padding: 15px;
 	font-size: 20px;
-	border-top: 4px solid rgba(33, 150, 243, 1);
+	border-top: 4px solid rgba(33, 150, 243, .7);
 	background-color: rgba(0, 0, 0, .8);
-	-webkit-transform: translateY(calc(100% - 4px));
-	-moz-transform: translateY(calc(100% - 4px));
-	-o-transform: translateY(calc(100% - 4px));
-	transform: translateY(calc(100% - 4px));
 }
 
 .index-review-title {
@@ -340,10 +336,7 @@ input {
 }
 
 .index-game-title.show {
-	-webkit-transform: translateY(0%);
-	-moz-transform: translateY(0%);
-	-o-transform: translateY(0%);
-	transform: translateY(0%);
+	border-top: 4px solid rgba(33, 150, 243, 1);
 }
 
 .index-review-title.show {
@@ -376,10 +369,7 @@ input {
 
 @media only screen and (max-device-width: 1024px) {
 	.index-game-title {
-		-webkit-transform: translateY(0%);
-		-moz-transform: translateY(0%);
-		-o-transform: translateY(0%);
-		transform: translateY(0%);
+		border-top: 4px solid rgba(33, 150, 243, 1);
 	}
 
 	.index-review-title {
