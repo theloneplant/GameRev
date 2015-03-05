@@ -14,6 +14,7 @@ module.exports = function(req, res) {
 					var data = {
 						id: user.id,
 						myUsername: user.getUsername(),
+						myUserPic: user.get('userPic'),
 						email: user.get('email'),
 						reviews: []
 					};
