@@ -3,6 +3,12 @@ var Parse = require('parse').Parse;
 Parse.initialize('8ND8FWpNrWD1j2zkGymXBFAGWebC7xiuA2GT7zAk', 'tYcMRGV7XEpjFv782VzQ2ezItHVuU40vsCMZ71DU');
 
 module.exports = function(req, res) {
+	var createReviewHref = '/login';
+	console.log(Parse.User.current());
+	if (Parse.User.current()) {
+		createReviewHref = '/new-review';
+	};
+
 	var Game = Parse.Object.extend('Games');
 	var query = new Parse.Query(Game);
 	query.equalTo('ref', req.params.game);
@@ -10,16 +16,28 @@ module.exports = function(req, res) {
 		success: function(gameData) {
 			gameData.relation('reviews').query().find({
 				success: function(reviews) {
+					var percentageGood = (100 * gameData.get('totalRating') / reviews.length).toFixedDown(1)
+					if (percentageGood) {
+						percentageGood += '% of players liked this game';
+					}
+					else {
+						percentageGood = 'Nobody has reviewed this game yet';
+					}
+
+					var date = gameData.get('releaseDate').toString().split(' ');
+					var dateString = date[1] + ' ' + date[2] + ', ' + date[3];
+
 					var data = {
+						createReviewHref: createReviewHref,
 						title: gameData.get('title'),
 						image: gameData.get('image'),
 						banner: gameData.get('banner'),
 						developer: gameData.get('developer'),
 						publisher: gameData.get('publisher'),
-						releaseDate: gameData.get('releaseDate'),
+						releaseDate: dateString,
 						description: gameData.get('description'),
 						verdict: gameData.get('verdict'),
-						percentageGood: (100 * gameData.get('totalRating') / reviews.length).toFixedDown(1),
+						percentageGood: percentageGood,
 						reviews: []
 					};
 

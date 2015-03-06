@@ -3,6 +3,12 @@ var Parse = require('parse').Parse;
 Parse.initialize('8ND8FWpNrWD1j2zkGymXBFAGWebC7xiuA2GT7zAk', 'tYcMRGV7XEpjFv782VzQ2ezItHVuU40vsCMZ71DU');
 
 module.exports = function(req, res) {
+	var createReviewHref = '/login';
+	console.log(Parse.User.current());
+	if (Parse.User.current()) {
+		createReviewHref = '/new-review';
+	};
+
 	var Review = Parse.Object.extend('Reviews');
 	var query = new Parse.Query(Review);
 	query.addDescending('views');
@@ -12,6 +18,7 @@ module.exports = function(req, res) {
 		success: function(reviews) {
 			var gameQuery = [];
 			var data = {
+				createReviewHref: createReviewHref,
 				reviews: []
 			};
 

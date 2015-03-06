@@ -5,7 +5,7 @@ Parse.initialize('8ND8FWpNrWD1j2zkGymXBFAGWebC7xiuA2GT7zAk', 'tYcMRGV7XEpjFv782V
 module.exports = function(req, res) {
 	var query = new Parse.Query(Parse.User);
 
-	query.equalTo('username', req.params.user);
+	query.equalTo('username', Parse.User.current().getUsername());
 	query.first({
 		success: function(user) {
 			console.log(user);
@@ -16,7 +16,7 @@ module.exports = function(req, res) {
 				email: user.get('email')
 			};
 			console.log(data);
-			require(path.join(__dirname, 'header')).renderPage(req, res, 'user-settings');
+			require(path.join(__dirname, 'header')).renderPage(req, res, 'user-settings', data);
 		}
-	});		
+	});
 };
