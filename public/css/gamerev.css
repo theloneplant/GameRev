@@ -530,7 +530,7 @@ input {
 }
 
 #game-search {
-	width: 340px;
+	width: calc(100% - 60px);
 	height: 60px;
 	padding: 15px;
 	font-size: 26px;
