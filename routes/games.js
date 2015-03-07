@@ -6,7 +6,7 @@ module.exports = function(req, res) {
 	var createReviewHref = '/login';
 	console.log(Parse.User.current());
 	if (Parse.User.current()) {
-		createReviewHref = '/new-review';
+		createReviewHref = '';
 	};
 
 	var Game = Parse.Object.extend('Games');

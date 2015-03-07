@@ -18,6 +18,7 @@ this.renderPage = function(req, res, route, moarDatum) {
 
 	data.header = path.join(__dirname, '../views/templates/header.handlebars');
 	data.footer = path.join(__dirname, '../views/templates/footer.handlebars');
+	data.createReviewModal = path.join(__dirname, '../views/templates/create-review-modal.handlebars');
 	data.page = route;
 	var currentUser = Parse.User.current();
 
@@ -42,12 +43,29 @@ this.renderPage = function(req, res, route, moarDatum) {
 	}
 	console.log(data.title);
 
-	helpers.render(data.header, data, function(err, result) {
-		data.header = result;
-		helpers.render(data.footer, data, function(err, result) {
-			data.footer = result;
-			console.log(data.username);
-			res.render(route, data);
+	var Game = Parse.Object.extend("Games");
+	var query = new Parse.Query(Game);
+	query.select("ref", "title");
+	query.find().then(function(gt) {
+		console.log(gt);
+		data.gameTitles = [];
+		gt.forEach(function(e) {
+			data.gameTitles.push({
+				title: e.get('title'),
+				ref: e.get('ref')
+			});
+		});
+		console.log(data.gameTitles);
+
+		helpers.render(data.createReviewModal, data, function(err, result) {
+			data.createReviewModal = result;
+			helpers.render(data.header, data, function(err, result) {
+				data.header = result;
+				helpers.render(data.footer, data, function(err, result) {
+					data.footer = result;
+					res.render(route, data);
+				});
+			});
 		});
 	});
 };
