@@ -3,10 +3,10 @@ var Parse = require('parse').Parse;
 Parse.initialize('8ND8FWpNrWD1j2zkGymXBFAGWebC7xiuA2GT7zAk', 'tYcMRGV7XEpjFv782VzQ2ezItHVuU40vsCMZ71DU');
 
 module.exports = function(req, res) {
-	var createReviewHref = '/login';
-	console.log(Parse.User.current());
+	var createReviewHref = 'href="/login"';
+	var refThing = req.originalUrl.replace('games', 'new-reviews');
 	if (Parse.User.current()) {
-		createReviewHref = '';
+		createReviewHref = 'href="' + refThing + '"';
 	};
 
 	var Game = Parse.Object.extend('Games');

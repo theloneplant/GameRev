@@ -10,6 +10,28 @@ $(document).ready(function() {
 	  theme: 'snow'
 	});
 
+	$('#summary ul').on('keydown', 'li input', function (e) {
+		var hasEmpty = false;
+		$(this).parent().parent().children().each(function (i, e) {
+			if ($(e).children().val() === '') {
+				hasEmpty = true;
+			}
+		});
+
+		console.log(e.which);
+
+		if (!hasEmpty && e.which === 13 && $(this).val() !== '') {
+			console.log($(this).val());
+			$(this).parent().after('<li><input type="text"></li>');
+			$(this).parent().parent().children().last().children().focus();
+		}
+		else if (e.which === 8 && $(this).val() === '') {
+			$(this).parent().parent().children().last().children().focus();
+			$(this).parent().remove();
+			e.preventDefault();
+		}
+	});
+
 	$('#publish-button').click(function(e) {
 		var reviewJSON = {
 			game: $('select[name=game]').val(),
@@ -19,7 +41,7 @@ $(document).ready(function() {
 				tldr: $('textarea[name=tldr]').val(),
 				rating: $('input[name=rating]:checked').val(),
 				likes: 0,
-				bannerImage: null
+				bannerImage: $('#review-banner').css('background-image')
 			}
 		}
 

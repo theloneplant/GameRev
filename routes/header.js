@@ -12,7 +12,7 @@ var Parse = require('parse').Parse;
 Parse.initialize('8ND8FWpNrWD1j2zkGymXBFAGWebC7xiuA2GT7zAk', 'tYcMRGV7XEpjFv782VzQ2ezItHVuU40vsCMZ71DU');
 
 this.renderPage = function(req, res, route, moarDatum) {
-	var data = require('../data.json');
+	var data = {};
 	data.username = '';
 	data.loggedIn = false;
 

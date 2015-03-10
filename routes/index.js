@@ -18,6 +18,34 @@ module.exports = function(req, res) {
 		success: function(reviews) {
 			var gameQuery = [];
 			var data = {
+				featuredSlider: [
+					{
+						active: "active",
+						id: "featured-1",
+						href: "/games/dragon-age-inquisition",
+						src: "/images/dai-cover.jpg"
+					},
+					{
+						id: "featured-2",
+						href: "/games/infamous",
+						src: "/images/infamous_banner.jpg"
+					},
+					{
+						id: "featured-3",
+						href: "/games/skyrim",
+						src: "/images/skyrim_banner.jpg"
+					},
+					{
+						id: "featured-4",
+						href: "/games/final-fantasy-XV",
+						src: "/images/finalfantasyxv_banner.jpg"
+					},
+					{
+						id: "featured-5",
+						href: "/games/revelations",
+						src: "/images/revelations_banner.png"
+					}
+				],
 				createReviewHref: createReviewHref,
 				reviews: []
 			};

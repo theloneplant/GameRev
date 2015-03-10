@@ -15,7 +15,10 @@ $(document).ready(function() {
 	});
 
 	$('#header-create-review-btn, #create-review-btn, #modal-overlay, #modal-close').click(function() {
-		toggleReviewModal();
+		var elementHref = $(this).parent().attr('href') || $(this).attr('href') || '';
+		if (elementHref.length === 0) {
+			toggleReviewModal();
+		}
 	});
 
 	$('#game-search').on('input', function() {
@@ -50,7 +53,7 @@ $(document).ready(function() {
 				$('#modal-window').addClass('show');
 			},10);
 
-			$('#game-search').focus();
+			//$('#game-search').focus();
 
 			modalShow = true;
 		}

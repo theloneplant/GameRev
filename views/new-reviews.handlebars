@@ -1,20 +1,24 @@
 	{{{header}}}
 
 	<div id="main-container">
-		<div id="new-review-form" class="container max-width-container">
-			<div class="form-group">
-				<label for="pwd">Select a Game</label>
-				<select name="game" class="z1 form-control">
-					{{#each gamepage.games}}
-					<option>{{this.title}}</option>
-					{{/each}}
-				</select>
+		<div id="review-banner" class="cover" style="background-image: url('{{banner}}');
+		background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(40%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.85))), url('{{banner}}') no-repeat center center;
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
+		background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
+		background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center;
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{banner}}') no-repeat center center; 
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;">
+			<div class="fluid-container max-width-container">
+				<input id="title-input" class="z2 form-control max-width-container" name="title" type="text" placeholder="Your Review Title">
 			</div>
-			<div class="form-group">
-				<label>Title</label>
-				<input name="title" type="text" class="z1 form-control">
-			</div>
-			<div id="review-container" class="z1">
+		</div>
+		<div id="new-review-form" class="fluid-container max-width-container">
+			<div id="review-container" class="z2">
 			  <div class="quill-wrapper" data-toggle="tooltip" data-placement="left" title="Write your review here">
 			    <div id="toolbar" class="toolbar">
 			      <span class="ql-format-group">
@@ -24,10 +28,10 @@
 					    <option value="monospace">Monospace</option>
 					  </select>
 					  <select title="Font Size" class="ql-size">
-					    <option value="10px">Small</option>
-					    <option value="13px" selected>Normal</option>
-					    <option value="18px">Large</option>
-					    <option value="32px">Huge</option>
+					    <option value="14px">Small</option>
+					    <option value="16px" selected>Normal</option>
+					    <option value="20px">Large</option>
+					    <option value="26px">Huge</option>
 					  </select>
 					</span>
 					<span class="ql-format-group">
@@ -102,18 +106,49 @@
 			  </div>
 			</div>
 
-			<div class="form-group">
-				<label>TL;DR</label>
-				<textarea name="tldr" class="z1 form-control"></textarea>
+			<div id="summary" class="form-group">
+				<div id="the-good" class="summary-section">
+					<div>The Good</div>
+					<ul>
+						<li>
+							<input type="text">
+						</li>
+					</ul>
+				</div>
+				<div id="the-okay" class="summary-section">
+					<div>The Okay</div>
+					<ul>
+						<li>
+							<input type="text">
+						</li>
+					</ul>
+				</div>
+				<div id="the-bad" class="summary-section">
+					<div>The Bad</div>
+					<ul>
+						<li>
+							<input type="text">
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="form-group">
-				<label>Rating</label>
-				<input class="rating-button" name="rating" value="Good" type="radio">Good</input>
-				<input class="rating-button" name="rating" value="Okay" type="radio">Okay</input>
-				<input class="rating-button" name="rating" value="Bad" type="radio">Bad</input>
+			<div id="verdict-container" class="text-center-horiz">
+				<h1 id="new-review-verdict">Verdict</h1>
+				<div class="form-group">
+					<div class="btn-group" data-toggle="buttons">
+						<label id="good-option" class="z2 rating-button btn btn-primary">
+							<input type="radio" name="rating" value="Good"> Good
+						</label>
+						<label id="okay-option" class="z2 rating-button btn btn-primary">
+							<input type="radio" name="rating" value="Okay"> Okay
+						</label>
+						<label id="bad-option" class="z2 rating-button btn btn-primary">
+							<input type="radio" name="rating" value="Bad"> Bad
+						</label>
+					</div>
+				</div>
+				<button id="publish-button" class="z1 btn btn-lg btn-info">Publish</button>
 			</div>
-			
-			<button id="publish-button" class="z1 btn btn-default">Publish</button>
 		</div>
 	</div>
 
