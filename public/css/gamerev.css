@@ -13,6 +13,10 @@ Dark Grey: #3D3D3D
 Red: #F44336
 Yellow: #FFC107
 Green: #4CAF50
+
+Light Red: #FFCDD2
+Light Yellow: #FFECB3
+Light Green: #C8E6C9
 */
 
 html, body {
@@ -521,13 +525,60 @@ input {
 
 .summary-section {
 	display: table;
-	width: 33.3%;
+	width: 33.34%;
 	float: left;
 }
 
+.summary-section div {
+	text-align: center;
+}
+
+#good-title {
+	color: #FFFFFF;
+	background-color: #4CAF50;
+	padding: 10px;
+	font-size: 20px;
+}
+
+#okay-title {
+	color: #FFFFFF;
+	background-color: #FFC107;
+	padding: 10px;
+	font-size: 20px;
+}
+
+#bad-title {
+	color: #FFFFFF;
+	background-color: #F44336;
+	padding: 10px;
+	font-size: 20px;
+}
+
+#the-good ul {
+	background-color: #C8E6C9;
+	margin: 0px;
+}
+
+#the-okay ul {
+	background-color: #FFECB3;
+	margin: 0px;
+}
+
+#the-bad ul {
+	background-color: #FFCDD2;
+	margin: 0px;
+}
+
+.summary-section ul li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 .summary-section input{
+	width: 100%;
 	border: none;
 	outline: none;
+	background-color: rgba(0,0,0,0);
 }
 
 #verdict-container {
