@@ -9,17 +9,22 @@ this.addReview = function(req, res) {
 	review.set('title', req.body.newReview['title']);
 	review.set('rating', req.body.newReview['rating']);
 	review.set('reviewBody', req.body.newReview['reviewBody']);
-	review.set('tldr', req.body.newReview['tldr']);
+	review.set('theGood', req.body.newReview['theGood']);
+	review.set('theOkay', req.body.newReview['theOkay']);
+	review.set('theBad', req.body.newReview['theBad']);
 	review.set('likes', parseInt(req.body.newReview['likes']));
 	review.set('bannerImage', req.body.newReview['bannerImage']);
 
 	var Games = Parse.Object.extend('Games');
 	var gameQuery = new Parse.Query(Games);
 
+	console.log(req.body.game);
+
 	// Find the game that this review will have a relation with
 	gameQuery.equalTo('title', req.body.game);
 	gameQuery.first({
 		success: function(game) {
+			console.log(game);
 			var userReviewRelation = user.relation('reviews');
 			var gameReviewRelation = game.relation('reviews');
 

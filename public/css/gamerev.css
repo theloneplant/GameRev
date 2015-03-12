@@ -476,6 +476,11 @@ input {
 	padding-bottom: 30px;
 }
 
+#review-body {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
 #toolbar {
 	margin-top: 0px;
 	border-bottom: 1px solid #B6B6B6;
@@ -488,7 +493,8 @@ input {
 
 #review-banner {
 	position: relative;
-	height: 275px;
+	height: auto;
+	min-height: 275px;
 }
 
 #title-input {
@@ -521,11 +527,13 @@ input {
 #summary {
 	display: table;
 	width: 100%;
+	height: 208px;
 }
 
 .summary-section {
 	display: table;
 	width: 33.34%;
+	height: 100%;
 	float: left;
 }
 
@@ -569,12 +577,23 @@ input {
 	margin: 0px;
 }
 
+.summary-section ul{
+	min-height: 160px;
+}
+
 .summary-section ul li{
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
 
 .summary-section input{
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+}
+
+.summary-section div{
 	width: 100%;
 	border: none;
 	outline: none;

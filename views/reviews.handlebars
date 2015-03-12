@@ -1,14 +1,56 @@
 	{{{header}}}
 
-	<div id="main-container">
-		<div class="container max-width-container">
-			<h2>{{title}}</h2>
-			<br>
-			<p>{{{reviewBody}}}</p>
-			<br>
-			<h4>TL;DR</h4>
-			<p>{{tldr}}</p>
-			<h3 class="text-center-horiz">Verdict: <strong class="game-{{toLowerCase rating}}-review">{{rating}}</strong></h3>
+<div id="main-container">
+		<div id="review-banner" class="cover" style="background-image: url('{{bannerImage}}');
+		background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%), url('{{bannerImage}}') no-repeat center center;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(40%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.85))), url('{{bannerImage}}') no-repeat center center;
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{bannerImage}}') no-repeat center center;
+		background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{bannerImage}}') no-repeat center center;
+		background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{bannerImage}}') no-repeat center center;
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.85) 100%), url('{{bannerImage}}') no-repeat center center; 
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;">
+			<div class="fluid-container max-width-container">
+				<div id="title-input" class="z2 max-width-container" style="background-color: rgba(0,0,0,0);">{{title}}</div>
+			</div>
+		</div>
+		<div id="new-review-form" class="fluid-container max-width-container">
+			<div id="review-container" class="z2">
+				<div id="review-body">{{{reviewBody}}}</div>
+			</div>
+
+			<div id="summary" class="form-group">
+				<div id="the-good" class="z1 summary-section">
+					<div id="good-title">The Good</div>
+					<ul>
+						{{#each theGood}}
+							<li>{{this.value}}</li>
+						{{/each}}
+					</ul>
+				</div>
+				<div id="the-okay" class="z1 summary-section">
+					<div id="okay-title">The Okay</div>
+					<ul>
+						{{#each theOkay}}
+							<li>{{this.value}}</li>
+						{{/each}}
+					</ul>
+				</div>
+				<div id="the-bad" class="z1 summary-section">
+					<div id="bad-title">The Bad</div>
+					<ul>
+						{{#each theBad}}
+							<li>{{this.value}}</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+			<div id="verdict-container" class="text-center-horiz">
+				<h3 class="text-center-horiz">Verdict: <strong class="game-{{toLowerCase rating}}-review">{{rating}}</strong></h3>
+			</div>
 		</div>
 	</div>
 

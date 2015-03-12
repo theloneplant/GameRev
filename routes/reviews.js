@@ -14,12 +14,19 @@ module.exports = function(req, res) {
 
 					review.relation('game').query().find({
 						success: function(game) {
+							var goodArr = review.get('theGood').split('\t');
+							var okayArr = review.get('theOkay').split('\t');
+							var badArr = review.get('theBad').split('\t');
+
 							var data = {
 								id: review.id,
 								title: review.get('title'),
 								rating: review.get('rating'),
 								reviewBody: review.get('reviewBody'),
-								tldr: review.get('tldr'),
+								theGood: [],
+								theOkay: [],
+								theBad: [],
+								bannerImage: review.get('bannerImage'),
 								user: {
 									username: user.username
 									// Add more to user later on
@@ -31,6 +38,30 @@ module.exports = function(req, res) {
 								},
 								timestamp: review.createdAt
 							}
+
+							goodArr.forEach(function(e) {
+								data.theGood.push({
+									value: e
+								});
+							});
+							data.theGood.pop(); // Remove trailing tab
+
+							okayArr.forEach(function(e) {
+								data.theOkay.push({
+									value: e
+								});
+							});
+							data.theOkay.pop();
+
+							badArr.forEach(function(e) {
+								data.theBad.push({
+									value: e
+								});
+							});
+							data.theBad.pop();
+
+							console.log(data.theGood);
+
 							require(path.join(__dirname, 'header')).renderPage(req, res, 'reviews', data);
 						}
 					});

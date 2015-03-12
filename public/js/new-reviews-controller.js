@@ -10,6 +10,7 @@ $(document).ready(function() {
 	  theme: 'snow'
 	});
 
+	/*
 	$('#summary ul').on('keydown', 'li input', function (e) {
 		var hasEmpty = false;
 		$(this).parent().parent().children().each(function (i, e) {
@@ -26,22 +27,40 @@ $(document).ready(function() {
 			$(this).parent().parent().children().last().children().focus();
 		}
 		else if (e.which === 8 && $(this).val() === '') {
-			$(this).parent().parent().children().last().children().focus();
+			
 			$(this).parent().remove();
 			e.preventDefault();
+			$(this).parent().parent().children().last().children().focus();
 		}
 	});
+	*/
 
 	$('#publish-button').click(function(e) {
+		var good = '', okay = '', bad = '';
+
+		$('#the-good ul li').each(function(i, e) {
+			good += $(this).children().val() + '\t';
+		});
+
+		$('#the-okay ul li').each(function(i, e) {
+			okay += $(this).children().val() + '\t';
+		});
+
+		$('#the-bad ul li').each(function(i, e) {
+			bad += $(this).children().val() + '\t';
+		});
+
 		var reviewJSON = {
-			game: $('select[name=game]').val(),
+			game: $('#hidden-game-title').text(),
 			newReview: {
 				title: $('input[name=title]').val(),
 				reviewBody: fullEditor.getHTML(),
-				tldr: $('textarea[name=tldr]').val(),
+				theGood: good,
+				theOkay: okay,
+				theBad: bad,
 				rating: $('input[name=rating]:checked').val(),
 				likes: 0,
-				bannerImage: $('#review-banner').css('background-image')
+				bannerImage: $('#hidden-game-banner').text()
 			}
 		}
 
