@@ -2,14 +2,16 @@
 
     <div id="main-container">
         <div class="min-height-container max-width-container">
-            <h2>{{myUsername}}</h2>
-            <p>{{email}}</p>
-            <img src="{{myUserPic}}"
+            <div id="profile-top-container">
+                <img id="user-profile-image" class="profile-title" src="{{myUserPic}}">
+                <h2 class="profile-title">{{myUsername}}</h2>
+            </div>
+            
 
             <br><br>
 
-            <h3>Reviews</h3>
-            <hr>
+            <h3>Reviews by this User</h3>
+            <div style="border-bottom: 2px solid #B6B6B6;"></div>
             {{#each reviews}}
             <div class="game-review fluid-container">
                 <h4>

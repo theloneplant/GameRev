@@ -458,11 +458,21 @@ input {
 /*-----SIGN UP PAGE-----*/
 #signup-container {
 	margin-top: 5%;
+	max-width: 400px;
+}
+
+#signup-container input {
+	margin-top: 3px;
 }
 
 /*-----LOGIN PAGE-----*/
 #login-container {
 	margin-top: 5%;
+	max-width: 400px;
+}
+
+#login-container input {
+	margin-top: 3px;
 }
 
 #login-signup-button {
@@ -846,6 +856,22 @@ input {
 	margin-right: 15px;
 }
 
+/*-----USER PROFILE-----*/
+#user-profile-image {
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+}
+
+#profile-top-container {
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.profile-title {
+	float: left;
+}
+
 /*-----GLOBAL STYLE-----*/
 
 .game-good-review {
@@ -961,4 +987,10 @@ input {
 	text-decoration: none;
 	font-size:16px;
 	color:#000;
+}
+
+@media only screen and (min-width: 768px) {
+	.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+	  float: none !important;
+	}
 }
